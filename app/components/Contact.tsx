@@ -2,7 +2,7 @@ import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section className="py-32">
+    <section id="contact" className="py-32">
       <div className="container">
         <div className="mb-14">
           <span className="text-sm font-semibold">Contact Me</span>

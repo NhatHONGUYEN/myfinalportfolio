@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
 interface navItems {
   name: string;
@@ -8,19 +8,9 @@ interface navItems {
 
 export default function Header() {
   const navItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "About",
-      link: "/about",
-    },
-
-    {
-      name: "Contact",
-      link: "/contact",
-    },
+    { name: 'Home', link: '#home' },
+    { name: 'Project', link: '#project' },
+    { name: 'Contact', link: '#contact' },
   ];
 
   return (

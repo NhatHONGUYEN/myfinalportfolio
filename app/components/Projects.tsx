@@ -70,7 +70,7 @@ const Projects = () => {
     };
   }, [carouselApi]);
   return (
-    <section className="py-32 ">
+    <section id="project" className="py-32 ">
       <div className="container mx-auto">
         <div className="flex flex-col gap-8 md:flex-row ">
           <div className="aspect-[5/6] overflow-clip rounded-3xl bg-accent">

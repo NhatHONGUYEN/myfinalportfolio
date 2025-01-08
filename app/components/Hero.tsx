@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-40">
+    <section id="home" className="py-40">
       <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-0 mx-auto">
         <div className="flex justify-end ">
           <Image
