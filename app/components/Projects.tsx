@@ -13,28 +13,37 @@ import Image from 'next/image';
 
 const projects = [
   {
-    id: 'project-1',
-    title: 'project 1',
+    id: 1,
+    date: 'December, 2024',
+    category: 'E-commerce',
+    title: 'Coffea',
     description:
-      'Nam vitae molestie arcu. Quisque eu libero orci. Aliquam imperdiet magna nec massa consectetur, id interdum ante congue.',
-    href: '#',
-    image: 'https://shadcnblocks.com/images/block/placeholder-1.svg',
+      'Coffea is your online shop for buying the best coffees from around the world. Discover our selection of high-quality beans and enjoy a smooth and secure shopping experience.',
+    padding: 'mb-10',
+    image: '/images/Coffea.png',
+    href: 'https://coffee-shop-five-jet.vercel.app/',
   },
   {
-    id: 'project-2',
-    title: 'project 2',
+    id: 2,
+    date: 'June, 2024',
+    category: 'E-commerce',
+    title: 'Wakaranai',
     description:
-      'Nam vitae molestie arcu. Quisque eu libero orci. Aliquam imperdiet magna nec massa consectetur, id interdum ante congue.',
-    href: '#',
-    image: 'https://shadcnblocks.com/images/block/placeholder-2.svg',
+      'Wakaranai offers trendy clothing for men and women. Explore our wide range of clothing and find your style with our unique collections.',
+    padding: 'mb-16',
+    image: '/images/Wakaranai.png',
+    href: 'https://wakaranai-alpha.vercel.app/',
   },
   {
-    id: 'project-3',
-    title: 'project 3',
+    id: 3,
+    date: 'April, 2024',
+    category: 'Showcase Website',
+    title: 'Sushi-Sensation',
     description:
-      'Nam vitae molestie arcu. Quisque eu libero orci. Aliquam imperdiet magna nec massa consectetur, id interdum ante congue.',
-    href: '#',
-    image: 'https://shadcnblocks.com/images/block/placeholder-3.svg',
+      'Sushi-Sensation is the website of our Japanese restaurant. Discover our menu, book a table, or order online for quick delivery.',
+    padding: 'mb-16',
+    image: '/images/Sushi-sensation.png',
+    href: 'https://sushi-sensation.vercel.app/',
   },
 ];
 

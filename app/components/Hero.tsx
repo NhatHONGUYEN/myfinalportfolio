@@ -3,7 +3,7 @@
 import { ArrowDownRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import profilPicture from '../public/images/photo-profil.jpg';
+
 import IconList from './IconList';
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-0 mx-auto">
         <div className="flex justify-end ">
           <Image
-            src={profilPicture}
+            src="/images/photo-profil.jpg"
             alt="photo-profil"
             className="max-h-[600px] w-full rounded-md object-contain"
             width={1000}
