@@ -71,7 +71,7 @@ const Projects = () => {
   }, [carouselApi]);
   return (
     <section id="project" className="py-32 ">
-      <div className="container mx-auto">
+      <div className="container px-10 md:mx-auto">
         <div className="flex flex-col gap-8 md:flex-row ">
           <div className="aspect-[5/6] overflow-clip rounded-3xl bg-accent">
             <Carousel
@@ -94,10 +94,10 @@ const Projects = () => {
             </Carousel>
           </div>
           <div className="flex shrink-0 flex-col md:w-1/2 md:pr-8 lg:pl-24 lg:text-left 2xl:pl-32">
-            <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-5xl">
+            <h2 className="mb-6 text-pretty text-3xl font-bold ">
               My projects
             </h2>
-            <p className="mb-16 text-muted-foreground lg:text-xl">
+            <p className="mb-16 text-muted-foreground ">
               Thanks to each project, I have been able to improve a specific
               skill, allowing me to continuously progress and prepare to tackle
               new challenges with confidence.

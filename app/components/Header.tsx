@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <div
-      className={`flex max-w-fit fixed top-10 inset-x-0 mx-auto border rounded-full bg-white dark:bg-black shadow z-[5000] px-8 py-2 items-center justify-center space-x-4 `}
+      className={`flex max-w-fit fixed top-10 inset-x-0 mx-auto border rounded-full bg-white dark:bg-black shadow z-[5000] px-8 py-2 items-center justify-center space-x-10 `}
     >
       {navItems.map((navItem: navItems, idx: number) => (
         <Link

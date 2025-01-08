@@ -12,7 +12,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               key={item.name}
               href={item.href}
-              className=" hover:text-gray-300"
+              className=" hover:text-muted-foreground dark:hover:text-muted-foreground"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon aria-hidden="true" className="size-6" />
@@ -20,7 +20,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm/6  md:order-1 md:mt-0">
-          &copy; © 2024 Nhat, Inc. All rights reserved.
+          © 2024 Nhat, Inc. All rights reserved.
         </p>
       </div>
     </footer>

@@ -2,22 +2,25 @@ import { Mail, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32">
-      <div className="container">
-        <div className="mb-14">
+    <section
+      id="contact"
+      className="py-32 mx-20 flex text-center lg:mx-auto  sm:text-left "
+    >
+      <div className="container ">
+        <div>
           <span className="text-sm font-semibold">Contact Me</span>
           <h1 className="mb-3 mt-1 text-balance text-3xl font-semibold md:text-4xl">
             Get in Touch with Me
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className=" text-muted-foreground">
             I&apos;d be delighted to help you. Don&apos;t hesitate to send me an
             email anytime.
           </p>
         </div>
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
-              <Mail className="h-6 w-auto" />
+            <span className=" hidden  mt-10 mb-4     md:flex size-12  flex-col items-center justify-center rounded-full bg-accent">
+              <Mail className="h-6 w-auto  " />
             </span>
             <p className="mb-2 text-lg font-semibold">Email Me</p>
             <p className="mb-3 text-muted-foreground">
@@ -34,7 +37,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
+            <span className=" hidden mt-10 mb-4    md:flex size-12 flex-col items-center justify-center rounded-full bg-accent">
               <Phone className="h-6 w-auto" />
             </span>
             <p className="mb-2 text-lg font-semibold"> Call Me</p>

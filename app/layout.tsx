@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Header from './components/Header';
-import { ScreenSize } from './components/ScreenSize';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -28,11 +27,10 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-6xl mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-6xl mx-auto bg-slate-300/10`}
       >
         <Header />
         {children}
-        <ScreenSize />
       </body>
     </html>
   );
