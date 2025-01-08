@@ -20,7 +20,7 @@ const projects = [
     description:
       'Coffea is your online shop for buying the best coffees from around the world. Discover our selection of high-quality beans and enjoy a smooth and secure shopping experience.',
     padding: 'mb-10',
-    image: '/images/Coffea.png',
+    image: '/images/coffea.png',
     href: 'https://coffee-shop-five-jet.vercel.app/',
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     description:
       'Wakaranai offers trendy clothing for men and women. Explore our wide range of clothing and find your style with our unique collections.',
     padding: 'mb-16',
-    image: '/images/Wakaranai.png',
+    image: '/images/wakaranai.png',
     href: 'https://wakaranai-alpha.vercel.app/',
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     description:
       'Sushi-Sensation is the website of our Japanese restaurant. Discover our menu, book a table, or order online for quick delivery.',
     padding: 'mb-16',
-    image: '/images/Sushi-sensation.png',
+    image: '/images/sushi.png',
     href: 'https://sushi-sensation.vercel.app/',
   },
 ];
@@ -69,9 +69,9 @@ const Projects = () => {
     };
   }, [carouselApi]);
   return (
-    <section className="py-32">
-      <div className="container">
-        <div className="flex flex-col gap-8 md:flex-row">
+    <section className="py-32 ">
+      <div className="container mx-auto">
+        <div className="flex flex-col gap-8 md:flex-row ">
           <div className="aspect-[5/6] overflow-clip rounded-3xl bg-accent">
             <Carousel
               setApi={setCarouselApi}
@@ -83,8 +83,8 @@ const Projects = () => {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      className="h-full w-full object-cover object-center"
-                      width={1000}
+                      className="h-full w-full object-cover"
+                      width={800}
                       height={800}
                     />
                   </CarouselItem>
