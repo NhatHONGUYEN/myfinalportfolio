@@ -17,7 +17,7 @@ const Contact = () => {
             email anytime.
           </p>
         </div>
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid  mt-10 gap-10 md:mt-0  md:grid-cols-3">
           <div>
             <span className=" hidden  mt-10 mb-4     md:flex size-12  flex-col items-center justify-center rounded-full bg-accent">
               <Mail className="h-6 w-auto  " />

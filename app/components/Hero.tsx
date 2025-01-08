@@ -16,8 +16,9 @@ const Hero = () => {
   const linkGithub = () => {
     window.open('https://github.com/NhatHONGUYEN');
   };
+
   return (
-    <section id="home" className="p-10 md:py-40">
+    <section id="home" className="p-10 mt-24 md:py-40 ">
       <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-20 mx-auto">
         <div className="flex   justify-end ">
           <Image
@@ -33,7 +34,7 @@ const Hero = () => {
           <h1 className="my-4 text-pretty text-4xl font-bold ">
             Developper full-stack
           </h1>
-          <p className="mb-8 max-w-xl  ">
+          <p className="mb-8 max-w-xl text-muted-foreground  ">
             I am a web developer based in Paris, passionate about coding and the
             opportunity to create cool stuff. Each project is a new adventure,
             pushing the boundaries of technology to deliver high-quality web

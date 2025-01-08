@@ -17,7 +17,9 @@ const transitionConfig = { duration: 0.3, ease: 'easeInOut' };
 const Home: FC = () => {
   return (
     <>
-      <Hero />
+      <InView variants={animationVariants} transition={transitionConfig}>
+        <Hero />
+      </InView>
 
       <InView variants={animationVariants} transition={transitionConfig}>
         <Projects />
