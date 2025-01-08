@@ -5,8 +5,6 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import profilPicture from '../public/images/photo-profil.jpg';
 import IconList from './IconList';
-import Link from 'next/link';
-import { navigation } from '@/lib/data';
 
 const Hero = () => {
   const linkMail = () => {
