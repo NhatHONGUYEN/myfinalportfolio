@@ -10,6 +10,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -121,13 +122,15 @@ const Projects = () => {
                     <p className="my-4 text-muted-foreground lg:my-6">
                       {project.description}
                     </p>
-                    <a
-                      href="#"
+                    <Link
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group/link flex items-center pb-3 text-sm text-accent-foreground"
                     >
                       Learn more{' '}
                       <ArrowRight className="ml-2 size-4 transition-transform group-hover/link:translate-x-1" />
-                    </a>
+                    </Link>
                   </div>
                 </li>
               ))}
