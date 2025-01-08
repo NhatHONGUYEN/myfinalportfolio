@@ -32,3 +32,50 @@ export const navigation: NavigationItem[] = [
     ),
   },
 ];
+
+interface Project {
+  id: number;
+  date: string;
+  category: string;
+  title: string;
+  description: string;
+  padding: string;
+  image: string;
+  href: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    date: 'December, 2024',
+    category: 'E-commerce',
+    title: 'Coffea',
+    description:
+      'Coffea is your online shop for buying the best coffees from around the world. Discover our selection of high-quality beans and enjoy a smooth and secure shopping experience.',
+    padding: 'mb-10',
+    image: '/images/coffea.png',
+    href: 'https://coffee-shop-five-jet.vercel.app/',
+  },
+  {
+    id: 2,
+    date: 'June, 2024',
+    category: 'E-commerce',
+    title: 'Wakaranai',
+    description:
+      'Wakaranai offers trendy clothing for men and women. Explore our wide range of clothing and find your style with our unique collections.',
+    padding: 'mb-16',
+    image: '/images/wakaranai.png',
+    href: 'https://wakaranai-alpha.vercel.app/',
+  },
+  {
+    id: 3,
+    date: 'April, 2024',
+    category: 'Showcase Website',
+    title: 'Sushi-Sensation',
+    description:
+      'Sushi-Sensation is the website of our Japanese restaurant. Discover our menu, book a table, or order online for quick delivery.',
+    padding: 'mb-16',
+    image: '/images/sushi.png',
+    href: 'https://sushi-sensation.vercel.app/',
+  },
+];

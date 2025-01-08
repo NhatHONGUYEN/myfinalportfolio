@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { InView } from '@/components/ui/in-view';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 
@@ -20,14 +19,12 @@ const Home: FC = () => {
       <InView variants={animationVariants} transition={transitionConfig}>
         <Hero />
       </InView>
-
       <InView variants={animationVariants} transition={transitionConfig}>
         <Projects />
       </InView>
       <InView variants={animationVariants} transition={transitionConfig}>
         <Contact />
       </InView>
-      <Footer />
     </>
   );
 };
