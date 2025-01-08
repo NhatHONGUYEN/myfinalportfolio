@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-32 mx-20 flex text-center lg:mx-auto  sm:text-left "
+      className="sm:py-32 mx-20 flex text-center lg:mx-auto  sm:text-left "
     >
       <div className="container ">
         <div>
