@@ -1,17 +1,18 @@
 import { ArrowDownRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import profilPicture from '../public/images/photo-profil.jpg';
 
 const Hero = () => {
   return (
-    <section className="py-32">
-      <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-20 mx-auto">
-        <div className="flex justify-end bg-muted">
+    <section className="py-40">
+      <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-0 mx-auto">
+        <div className="flex justify-end ">
           <Image
-            src="https://shadcnblocks.com/images/block/placeholder-1.svg"
-            alt="placeholder hero"
-            className="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
-            width={800}
+            src={profilPicture}
+            alt="photo-profil"
+            className="max-h-[600px] w-full rounded-md object-contain"
+            width={1000}
             height={800}
           />
         </div>
