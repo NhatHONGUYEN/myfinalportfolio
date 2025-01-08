@@ -1,10 +1,20 @@
+'use client';
+
 import { ArrowDownRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import profilPicture from '../public/images/photo-profil.jpg';
 import IconList from './IconList';
+import Link from 'next/link';
+import { navigation } from '@/lib/data';
 
 const Hero = () => {
+  const linkMail = () => {
+    window.open(
+      'https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com'
+    );
+  };
+
   return (
     <section className="py-40">
       <div className="container grid items-center gap-10 lg:grid-cols-2 lg:gap-0 mx-auto">
@@ -19,12 +29,13 @@ const Hero = () => {
         </div>
         <div className="flex flex-col items-center text-center lg:max-w-3xl lg:items-start lg:text-left">
           <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl xl:text-7xl">
-            Blocks built with Shadcn & Tailwind
+            Developper full-stack
           </h1>
           <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
-            Finely crafted components built with React, Tailwind and Shadcn UI.
-            Developers can copy and paste these blocks directly into their
-            project.
+            I am a web developer based in Paris, passionate about coding and the
+            opportunity to create cool stuff. Each project is a new adventure,
+            pushing the boundaries of technology to deliver high-quality web
+            solutions.
           </p>
           <div className="mb-12 flex w-fit flex-col items-center gap-4 sm:flex-row">
             <span className="inline-flex items-center -space-x-4"></span>
@@ -32,10 +43,13 @@ const Hero = () => {
               <IconList />
             </div>
           </div>
-          <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-            <Button className="w-full sm:w-auto">Sign Up</Button>
-            <Button variant="outline" className="w-full sm:w-auto">
-              Get Started
+          <div className="flex w-full flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+            <Button
+              onClick={linkMail}
+              variant="outline"
+              className="w-full sm:w-auto"
+            >
+              Contact me
               <ArrowDownRight className="ml-2 size-4" />
             </Button>
           </div>
