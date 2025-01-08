@@ -1,7 +1,8 @@
-import { ArrowDownRight, Star } from 'lucide-react';
+import { ArrowDownRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import profilPicture from '../public/images/photo-profil.jpg';
+import IconList from './IconList';
 
 const Hero = () => {
   return (
@@ -28,13 +29,7 @@ const Hero = () => {
           <div className="mb-12 flex w-fit flex-col items-center gap-4 sm:flex-row">
             <span className="inline-flex items-center -space-x-4"></span>
             <div>
-              <div className="flex items-center gap-1">
-                <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                <Star className="size-5 fill-yellow-400 text-yellow-400" />
-              </div>
+              <IconList />
             </div>
           </div>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
