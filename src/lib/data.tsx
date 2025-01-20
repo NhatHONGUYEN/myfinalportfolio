@@ -47,6 +47,17 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    date: 'January, 2025',
+    category: 'Recipe Website',
+    title: 'Meals Finder',
+    description:
+      'Meals Finder is your go-to platform for discovering delicious recipes from around the world. Explore a variety of cuisines, find step-by-step instructions, and enjoy a seamless cooking experience.',
+    padding: 'mb-10',
+    image: '/images/Recipes.jpg',
+    href: 'https://meals-finder-lake.vercel.app/',
+  },
+  {
+    id: 2,
     date: 'December, 2024',
     category: 'E-commerce',
     title: 'Coffea',
@@ -55,17 +66,6 @@ export const projects: Project[] = [
     padding: 'mb-10',
     image: '/images/coffea.png',
     href: 'https://coffee-shop-five-jet.vercel.app/',
-  },
-  {
-    id: 2,
-    date: 'June, 2024',
-    category: 'E-commerce',
-    title: 'Wakaranai',
-    description:
-      'Wakaranai offers trendy clothing for men and women. Explore our wide range of clothing and find your style with our unique collections.',
-    padding: 'mb-16',
-    image: '/images/wakaranai.png',
-    href: 'https://wakaranai-alpha.vercel.app/',
   },
   {
     id: 3,
