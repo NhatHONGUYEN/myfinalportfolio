@@ -47,6 +47,19 @@ interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    date: 'April, 2024',
+    category: 'Showcase Website',
+    title: 'Pedro Pasta',
+    description:
+      'Pedro Pasta is a delightful website for our Italian restaurant. Explore our menu, reserve a table, or order online for a quick and delicious meal delivered right to your doorstep.',
+    padding: 'mb-16',
+    image:
+      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/k9g1a5g1mre3h8nbls5w',
+    href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
+  },
+
+  {
+    id: 2,
     date: 'January, 2025',
     category: 'Recipe Website',
     title: 'Meals Finder',
@@ -57,7 +70,7 @@ export const projects: Project[] = [
     href: 'https://meals-finder-lake.vercel.app/',
   },
   {
-    id: 2,
+    id: 3,
     date: 'December, 2024',
     category: 'E-commerce',
     title: 'Coffea',
@@ -66,16 +79,5 @@ export const projects: Project[] = [
     padding: 'mb-10',
     image: '/images/coffea.png',
     href: 'https://coffee-shop-five-jet.vercel.app/',
-  },
-  {
-    id: 3,
-    date: 'April, 2024',
-    category: 'Showcase Website',
-    title: 'Sushi-Sensation',
-    description:
-      'Sushi-Sensation is the website of our Japanese restaurant. Discover our menu, book a table, or order online for quick delivery.',
-    padding: 'mb-16',
-    image: '/images/sushi.png',
-    href: 'https://sushi-sensation.vercel.app/',
   },
 ];
