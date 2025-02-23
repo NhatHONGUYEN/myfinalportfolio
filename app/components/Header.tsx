@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ModeToggle } from '@/components/ModeToggle';
 
 export default function Header() {
   const features = [
@@ -26,17 +27,8 @@ export default function Header() {
 
   return (
     <section className="py-4">
-      <div className="container">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="logo"
-              className="w-auto"
-              width={100}
-              height={100}
-            />
-          </div>
+      <div className="container mx-auto">
+        <nav className="flex items-center justify-end gap-4">
           <div className="flex flex-col">
             <div className="grid md:grid-cols-2">
               {features.map((feature, index) => (
@@ -53,8 +45,7 @@ export default function Header() {
             </div>
           </div>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="outline">Sign in</Button>
-            <Button>Start for free</Button>
+            <ModeToggle />
           </div>
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">

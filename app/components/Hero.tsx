@@ -2,7 +2,7 @@
 
 import { MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 
 export default function Hero() {
@@ -17,21 +17,33 @@ export default function Hero() {
   };
 
   return (
-    <section>
-      <div className="container">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <Badge variant="outline">✨ Nhat-Quan HO NGUYEN</Badge>
-            <h1 className="my-6 text-pretty text-4xl font-bold lg:text-5xl">
+    <section className="py-32">
+      <div className="container ">
+        <div className="z-10 mx-auto flex max-w-4xl flex-col items-center gap-14 text-center">
+          <Avatar className="w-52 h-52">
+            <AvatarImage
+              src="/images/photo-profil.jpg"
+              className="object-cover"
+              alt="photo profil"
+            />
+            <AvatarFallback>NH</AvatarFallback>
+          </Avatar>
+          <div>
+            <Badge variant="secondary" className="mb-6">
+              Nhat-Quan HO NGUYEN
+            </Badge>
+            <h1 className="mb-4 text-pretty text-3xl font-medium lg:text-6xl">
               Developper full-stack
             </h1>
-            <p className="mb-8 max-w-xl text-muted-foreground ">
+            <p className="mx-auto max-w-xl text-muted-foreground">
               I am a web developer based in Paris, passionate about coding and
               the opportunity to create cool stuff. Each project is a new
               adventure, pushing the boundaries of technology to deliver
               high-quality web solutions.
             </p>
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
+          </div>
+          <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row">
+            <div className="mt-4 flex justify-center gap-2">
               <Button onClick={linkMail} size="lg">
                 Contact me
               </Button>
@@ -49,15 +61,6 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          <Image
-            src={'/profilpic.png'}
-            alt={'profilpic'}
-            className="max-h-[800px] w-full rounded-md object-cover"
-            width={400}
-            height={400}
-            quality={100}
-            priority
-          />
         </div>
       </div>
     </section>

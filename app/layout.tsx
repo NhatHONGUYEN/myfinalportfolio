@@ -1,18 +1,14 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Work_Sans } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-work-sans',
 });
 
 export const metadata: Metadata = {
@@ -27,12 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-6xl mx-auto bg-slate-300/10`}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${workSans.variable} antialiased max-w-5xl mx-auto`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
