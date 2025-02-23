@@ -1,31 +1,109 @@
-import Link from 'next/link';
-import React from 'react';
+'use client';
 
-interface navItems {
-  name: string;
-  link: string;
-}
+import { MenuIcon } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
-  const navItems = [
-    { name: 'Home', link: '#home' },
-    { name: 'Project', link: '#project' },
-    { name: 'Contact', link: '#contact' },
+  const features = [
+    {
+      title: 'project',
+      href: '#project',
+    },
+    {
+      title: 'contact',
+      href: '#contact',
+    },
   ];
 
   return (
-    <div
-      className={`flex max-w-fit fixed top-10 inset-x-0 mx-auto border rounded-full bg-white dark:bg-black shadow z-[5000] px-8 py-2 items-center justify-center space-x-10 `}
-    >
-      {navItems.map((navItem: navItems, idx: number) => (
-        <Link
-          key={idx}
-          href={navItem.link}
-          className="relative flex items-center space-x-1 text-neutral-600 dark:text-neutral-50 hover:text-neutral-500 dark:hover:text-neutral-300"
-        >
-          <span className="text-sm">{navItem.name}</span>
-        </Link>
-      ))}
-    </div>
+    <section className="py-4">
+      <div className="container">
+        <nav className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              className="w-auto"
+              width={100}
+              height={100}
+            />
+          </div>
+          <div className="flex flex-col">
+            <div className="grid md:grid-cols-2">
+              {features.map((feature, index) => (
+                <Link
+                  href={feature.href}
+                  key={index}
+                  className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                >
+                  <div key={feature.title}>
+                    <p className="mb-1 font-semibold">{feature.title}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="hidden items-center gap-4 lg:flex">
+            <Button variant="outline">Sign in</Button>
+            <Button>Start for free</Button>
+          </div>
+          <Sheet>
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="outline" size="icon">
+                <MenuIcon className="h-4 w-4" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="top" className="max-h-screen overflow-scroll">
+              <SheetHeader>
+                <SheetTitle>
+                  <div className="flex items-center gap-4">
+                    <Image src="/logo.png" alt="logo" className="w-8" />
+                  </div>
+                </SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col">
+                <div className="grid md:grid-cols-2">
+                  {features.map((feature, index) => (
+                    <a
+                      href={feature.href}
+                      key={index}
+                      className="rounded-md p-3 transition-colors hover:bg-muted/70"
+                    >
+                      <div key={feature.title}>
+                        <p className="mb-1 font-semibold">{feature.title}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-6 mt-6">
+                  <a href="#" className="font-medium">
+                    Templates
+                  </a>
+                  <a href="#" className="font-medium">
+                    Blog
+                  </a>
+                  <a href="#" className="font-medium">
+                    Pricing
+                  </a>
+                </div>
+                <div className="mt-6 flex flex-col gap-4">
+                  <Button variant="outline">Sign in</Button>
+                  <Button>Start for free</Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </nav>
+      </div>
+    </section>
   );
 }
