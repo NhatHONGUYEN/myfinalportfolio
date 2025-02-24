@@ -13,3 +13,9 @@ export type Project = {
   image: string;
   href: string;
 };
+
+export type NavigationItem = {
+  name: string;
+  href: string;
+  icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+};
