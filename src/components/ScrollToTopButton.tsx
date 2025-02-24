@@ -1,5 +1,6 @@
 'use client';
 
+import { BlurIn } from '../../animations/BlurIn';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 
@@ -33,9 +34,11 @@ export default function ScrollToTopButton() {
   const label = 'Go to top';
   return (
     <div className="fixed bottom-4 right-4">
-      <Button onClick={scrollToTop} size="lg" className="group flex-col">
-        {label}
-      </Button>
+      <BlurIn>
+        <Button onClick={scrollToTop} size="lg" className="group flex-col">
+          {label}
+        </Button>
+      </BlurIn>
     </div>
   );
 }
