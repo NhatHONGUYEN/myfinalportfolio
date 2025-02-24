@@ -37,7 +37,7 @@ export default function Hero() {
               <h1 className="mb-4 text-3xl  lg:text-4xl text-pretty font-semibold">
                 Developper full-stack
               </h1>
-              <p className="mx-auto max-w-xl text-muted-foreground">
+              <p className="mx-auto w-96 sm:w-auto sm:max-w-xl text-muted-foreground">
                 I am a web developer based in Paris, passionate about coding and
                 the opportunity to create cool stuff. Each project is a new
                 adventure, pushing the boundaries of technology to deliver

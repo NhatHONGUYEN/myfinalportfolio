@@ -18,7 +18,7 @@ export default function IconGrid() {
           </div>
 
           {/* Grid Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-20">
+          <div className="grid grid-cols-3 w-96 mx-auto md:w-auto   md:grid-cols-4 lg:grid-cols-5 gap-6 mt-20">
             {IconsList.map((icon) => (
               <div key={icon.key} className="p-4 flex justify-center">
                 <Image
