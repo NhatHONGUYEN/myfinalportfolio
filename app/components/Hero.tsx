@@ -17,8 +17,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="py-32">
-      <div className="container ">
+    <section className="py-32 mt-20">
+      <div className="container  ">
         <div className="z-10 mx-auto flex max-w-4xl flex-col items-center gap-14 text-center">
           <Avatar className="w-52 h-52">
             <AvatarImage

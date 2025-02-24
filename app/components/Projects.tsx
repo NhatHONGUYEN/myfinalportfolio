@@ -1,21 +1,13 @@
-import { ArrowRight } from 'lucide-react';
-
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from '@/components/ui/card';
+
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
 
 export default function Projects() {
   return (
-    <section className="py-32">
-      <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
+    <section id="projects" className="py-32">
+      <div className="container  mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
             Latest Updates
@@ -27,63 +19,49 @@ export default function Projects() {
             Explore my latest articles and tutorials on web development, design
             systems, and accessibility.
           </p>
-          <Button variant="link" className="w-full sm:w-auto" asChild>
-            <a href={'https://shadcnblocks.com'} target="_blank">
-              View all projects
-              <ArrowRight className="ml-2 size-4" />
-            </a>
-          </Button>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {projects.map((project) => (
-            <Card
+            <article
               key={project.id}
-              className="grid grid-rows-[auto_auto_1fr_auto]"
+              className="flex flex-col items-start justify-between"
             >
-              <div className="aspect-[16/9] w-full">
-                <Link
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-opacity duration-200 fade-in hover:opacity-70"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover object-center"
-                    width={400}
-                    height={225}
-                    quality={100}
-                    priority
-                  />
-                </Link>
+              <div className="relative w-full">
+                <Image
+                  alt={project.title}
+                  src={project.image}
+                  className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2"
+                  width={500}
+                  height={300}
+                />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
               </div>
-              <CardHeader>
-                <h3 className="text-lg font-semibold hover:underline md:text-xl">
-                  <Link
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.title}
-                  </Link>
-                </h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{project.description}</p>
-              </CardContent>
-              <CardFooter>
-                <Link
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-foreground hover:underline"
-                >
-                  Read more
-                  <ArrowRight className="ml-2 size-4" />
-                </Link>
-              </CardFooter>
-            </Card>
+              <div className="max-w-xl">
+                <div className="mt-8 flex items-center gap-x-4 text-xs">
+                  <time dateTime={project.date} className="text-gray-500">
+                    {project.date}
+                  </time>
+                  <div className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                    {project.category}
+                  </div>
+                </div>
+                <div className="group relative">
+                  <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                    <Link
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="absolute inset-0" />
+                      {project.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

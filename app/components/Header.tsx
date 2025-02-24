@@ -1,98 +1,108 @@
 'use client';
 
-import { MenuIcon } from 'lucide-react';
+import { Home } from 'lucide-react'; // Importe l'icône Home
+import { useState } from 'react';
+
+import { cn } from '@/lib/utils';
+
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import Link from 'next/link';
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from '@/components/ui/navigation-menu';
 import { ModeToggle } from '@/components/ModeToggle';
 
+// Mise à jour des liens
+const navigationsLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
+
 export default function Header() {
-  const features = [
-    {
-      title: 'project',
-      href: '#project',
-    },
-    {
-      title: 'contact',
-      href: '#contact',
-    },
-  ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <section className="py-4">
-      <div className="container mx-auto">
-        <nav className="flex items-center justify-end gap-4">
-          <div className="flex flex-col">
-            <div className="grid md:grid-cols-2">
-              {features.map((feature, index) => (
-                <Link
-                  href={feature.href}
-                  key={index}
-                  className="rounded-md p-3 transition-colors hover:bg-muted/70"
+    <section className="absolute top-5 left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border bg-background/70 backdrop-blur-md lg:top-12">
+      <div className="flex items-center justify-between px-6 py-3">
+        {/* Remplace le logo par l'icône Home */}
+        <a href="/" className="flex shrink-0 items-center gap-2">
+          <Home className="size-6 text-muted-foreground" /> {/* Icône Home */}
+        </a>
+
+        {/* Desktop Navigation */}
+        <NavigationMenu className="max-lg:hidden">
+          <NavigationMenuList>
+            {navigationsLinks.map((link) => (
+              <NavigationMenuItem key={link.label} className="">
+                <a
+                  href={link.href}
+                  className={cn(
+                    'relative bg-transparent px-1.5 text-sm font-medium text-muted-foreground hover:text-primary'
+                  )}
                 >
-                  <div key={feature.title}>
-                    <p className="mb-1 font-semibold">{feature.title}</p>
-                  </div>
-                </Link>
-              ))}
+                  {link.label}
+                </a>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        {/* Remplace les boutons d'authentification par ModeToggle */}
+        <div className="flex items-center gap-2.5">
+          <ModeToggle /> {/* Utilise le composant ModeToggle */}
+          {/* Hamburger Menu Button (Mobile Only) */}
+          <button
+            className="relative flex size-8 text-muted-foreground lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
+              <span
+                aria-hidden="true"
+                className={`absolute block h-0.5 w-full rounded-full bg-current transition duration-500 ease-in-out ${
+                  isMenuOpen ? 'rotate-45' : '-translate-y-1.5'
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`absolute block h-0.5 w-full rounded-full bg-current transition duration-500 ease-in-out ${
+                  isMenuOpen ? 'opacity-0' : ''
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`absolute block h-0.5 w-full rounded-full bg-current transition duration-500 ease-in-out ${
+                  isMenuOpen ? '-rotate-45' : 'translate-y-1.5'
+                }`}
+              ></span>
             </div>
-          </div>
-          <div className="hidden items-center gap-4 lg:flex">
-            <ModeToggle />
-          </div>
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="outline" size="icon">
-                <MenuIcon className="h-4 w-4" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="top" className="max-h-screen overflow-scroll">
-              <SheetHeader>
-                <SheetTitle>
-                  <div className="flex items-center gap-4">
-                    <Image src="/logo.png" alt="logo" className="w-8" />
-                  </div>
-                </SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col">
-                <div className="grid md:grid-cols-2">
-                  {features.map((feature, index) => (
-                    <a
-                      href={feature.href}
-                      key={index}
-                      className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                    >
-                      <div key={feature.title}>
-                        <p className="mb-1 font-semibold">{feature.title}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-6 mt-6">
-                  <a href="#" className="font-medium">
-                    Templates
-                  </a>
-                  <a href="#" className="font-medium">
-                    Blog
-                  </a>
-                  <a href="#" className="font-medium">
-                    Pricing
-                  </a>
-                </div>
-                <div className="mt-6 flex flex-col gap-4">
-                  <Button variant="outline">Sign in</Button>
-                  <Button>Start for free</Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          </button>
+        </div>
+      </div>
+
+      {/*  Mobile Menu Navigation */}
+      <div
+        className={cn(
+          'fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-2xl border bg-background p-6 transition-all duration-300 ease-in-out lg:hidden',
+          isMenuOpen
+            ? 'visible translate-y-0 opacity-100'
+            : 'invisible -translate-y-4 opacity-0'
+        )}
+      >
+        <nav className="flex flex-1 flex-col divide-y divide-border">
+          {navigationsLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className={cn(
+                'py-4 text-base font-medium text-primary transition-colors first:pt-0 last:pb-0 hover:text-primary/80'
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
       </div>
     </section>
