@@ -45,7 +45,9 @@ export default function Header() {
         </NavigationMenu>
         {/* Remplace les boutons d'authentification par ModeToggle */}
         <div className="flex items-center gap-2.5">
-          <ModeToggle /> {/* Utilise le composant ModeToggle */}
+          <div className="hidden lg:flex">
+            <ModeToggle />
+          </div>
           {/* Hamburger Menu Button (Mobile Only) */}
           <Button
             className="relative flex size-8 text-muted-foreground lg:hidden"
@@ -98,6 +100,10 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <div className="divide-y divide-border py-4">
+            {' '}
+            <ModeToggle />
+          </div>
         </nav>
       </div>
     </section>

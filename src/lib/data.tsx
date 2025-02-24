@@ -93,70 +93,50 @@ export const IconsList: IconsItem[] = [
     key: 1,
     src: 'https://shadcnblocks.com/images/block/logos/github-icon.svg',
     alt: 'GitHub',
-    width: 48,
-    height: 48,
   },
   {
     key: 2,
     src: 'https://shadcnblocks.com/images/block/logos/tailwind-icon.svg',
     alt: 'Tailwind CSS',
-    width: 48,
-    height: 48,
   },
   {
     key: 3,
     src: 'https://shadcnblocks.com/images/block/logos/nextjs-icon.svg',
     alt: 'Next.js',
-    width: 48,
-    height: 48,
   },
   {
     key: 4,
     src: 'https://shadcnblocks.com/images/block/logos/typescript-icon.svg',
     alt: 'TypeScript',
-    width: 48,
-    height: 48,
   },
   {
     key: 5,
     src: '/images/motion.png',
     alt: 'Framer Motion',
-    width: 48,
-    height: 48,
   },
   {
     key: 6,
     src: 'https://tanstack.com/favicon.ico', // TanStack Query
     alt: 'TanStack Query',
-    width: 48,
-    height: 48,
   },
   {
     key: 7,
     src: '/images/prisma.png',
     alt: 'Prisma',
-    width: 48,
-    height: 48,
   },
   {
     key: 8,
     src: 'https://www.postgresql.org/media/img/about/press/elephant.png', // PostgreSQL
     alt: 'PostgreSQL',
-    width: 48,
-    height: 48,
   },
   {
     key: 9,
     src: 'https://authjs.dev/img/logo-sm.png', // Auth.js
     alt: 'Auth.js',
-    width: 48,
-    height: 48,
   },
   {
     key: 10,
-    src: '/images/zustand.png',
+    src: '/images/projects/zustand.svg',
     alt: 'Zustand',
-    width: 72,
-    height: 72,
   },
 ];

@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import { ScreenSize } from './components/ScreenSize';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -44,7 +43,6 @@ export default function RootLayout({
             {children}
             <Footer />
             <ScrollToTopButton />
-            <ScreenSize />
           </div>
         </ThemeProvider>
       </body>
