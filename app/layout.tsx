@@ -42,7 +42,10 @@ export const metadata: Metadata = {
     description:
       'A simple portfolio website to present my projects and skills.',
     images: [
-      'https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp',
+      {
+        url: 'https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp',
+        alt: 'Nhat Portfolio - A simple portfolio website',
+      },
     ],
   },
 };
