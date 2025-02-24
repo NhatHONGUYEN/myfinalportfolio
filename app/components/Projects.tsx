@@ -36,7 +36,7 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
               </div>
-              <div className="max-w-xl">
+              <div className="max-w-xl h-full">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
                   <time dateTime={project.date} className="text-gray-500">
                     {project.date}
@@ -56,7 +56,7 @@ export default function Projects() {
                       {project.title}
                     </Link>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+                  <p className="mt-5 text-sm/6 text-gray-600">
                     {project.description}
                   </p>
                 </div>
