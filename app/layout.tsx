@@ -16,6 +16,9 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: 'Nhat Portfolio',
   description: 'A simple portfolio website to present my projects and skills.',
+  icons: {
+    icon: '/images/coffee.svg',
+  },
 };
 
 export default function RootLayout({
