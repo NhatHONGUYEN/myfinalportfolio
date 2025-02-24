@@ -4,6 +4,7 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import ParticlesBackGround from '@/components/ParticlesBackGround';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -30,9 +31,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          {/* ParticlesBackGround en arrière-plan */}
+          <div className="fixed inset-0 -z-10">
+            <ParticlesBackGround />
+          </div>
+
+          {/* Contenu principal */}
+          <div className="relative z-10">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

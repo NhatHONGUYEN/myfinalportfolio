@@ -23,7 +23,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <section className="absolute top-5 left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border bg-background/70 backdrop-blur-md lg:top-12">
+    <section className="absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border bg-background/70 backdrop-blur-md ">
       <div className="flex items-center justify-between px-6 py-3">
         {/* Remplace le logo par l'icône Home */}
         <a href="/" className="flex shrink-0 items-center gap-2">
