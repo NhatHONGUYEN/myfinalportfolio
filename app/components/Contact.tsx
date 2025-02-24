@@ -1,55 +1,63 @@
 import { Mail, Phone } from 'lucide-react';
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="sm:py-32 mx-20 flex text-center lg:mx-auto  sm:text-left "
-    >
-      <div className="container ">
-        <div>
-          <span className="text-sm font-semibold">Contact Me</span>
-          <h1 className="mb-3 mt-1 text-balance text-3xl font-semibold md:text-4xl">
-            Get in Touch with Me
-          </h1>
-          <p className=" text-muted-foreground">
-            I&apos;d be delighted to help you. Don&apos;t hesitate to send me an
-            email anytime.
-          </p>
-        </div>
-        <div className="grid  mt-10 gap-10 md:mt-0  md:grid-cols-3">
+    <div id="contact" className="isolate  px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-2xl sm:text-center">
+        <h2 className="text-4xl font-semibold tracking-tight text-balance  sm:text-5xl">
+          Get in Touch with Me
+        </h2>
+        <p className="mt-2 text-lg/8 ">
+          {' '}
+          I&apos;d be delighted to help you. Don&apos;t hesitate to send me an
+          email anytime..
+        </p>
+      </div>
+      <div className="mx-auto mt-20 max-w-lg space-y-16">
+        <div className="flex gap-x-6">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary">
+            <Mail
+              aria-hidden="true"
+              className="size-6 text-primary-foreground"
+            />
+          </div>
           <div>
-            <span className=" hidden  mt-10 mb-4     md:flex size-12  flex-col items-center justify-center rounded-full bg-accent">
-              <Mail className="h-6 w-auto  " />
-            </span>
-            <p className="mb-2 text-lg font-semibold">Email Me</p>
-            <p className="mb-3 text-muted-foreground">
+            <h3 className="text-base/7 font-semibold ">Email Me</h3>
+            <p className="mt-2 text-base/7 text-muted-foreground ">
               I&apos;m ready to assist you.
             </p>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold hover:underline"
-            >
-              hnnhat67@gmail.com
-            </a>
+            <p className="mt-4 text-sm/6 font-semibold">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold hover:underline"
+              >
+                hnnhat67@gmail.com
+              </a>
+            </p>
           </div>
-
+        </div>
+        <div className="flex gap-x-6">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary">
+            <Phone
+              aria-hidden="true"
+              className="size-6 text-primary-foreground"
+            />
+          </div>
           <div>
-            <span className=" hidden mt-10 mb-4    md:flex size-12 flex-col items-center justify-center rounded-full bg-accent">
-              <Phone className="h-6 w-auto" />
-            </span>
-            <p className="mb-2 text-lg font-semibold"> Call Me</p>
-            <p className="mb-3 text-muted-foreground">
+            <h3 className="text-base/7 font-semibold ">Call Me</h3>
+            <p className="mt-2 text-base/7 text-muted-foreground ">
               I&apos;m available Mon-Fri, 9am-5pm.
             </p>
-            <dd className="font-semibold hover:underline">+33 7 69 57 74 67</dd>
+            <p className="mt-4 text-sm/6 font-semibold">
+              <dd className="font-semibold hover:underline">
+                +33 7 69 57 74 67
+              </dd>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Contact;
+}

@@ -30,23 +30,26 @@ export default function Projects() {
                 <Image
                   alt={project.title}
                   src={project.image}
-                  className="aspect-video w-full rounded-2xl bg-gray-100 object-cover sm:aspect-2/1 lg:aspect-3/2"
+                  className="aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
                   width={500}
                   height={300}
                 />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/10 ring-inset" />
               </div>
               <div className="max-w-xl h-full">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <time dateTime={project.date} className="text-gray-500">
+                  <time
+                    dateTime={project.date}
+                    className="text-muted-foreground"
+                  >
                     {project.date}
                   </time>
-                  <div className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                  <div className="relative z-10 rounded-full bg-secondary px-3 py-1.5 font-medium text-primary hover:bg-secondary-foreground hover:text-secondary">
                     {project.category}
                   </div>
                 </div>
                 <div className="group relative">
-                  <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                  <h3 className="mt-3 text-lg/6 font-semibold  group-hover:text-muted-foreground">
                     <Link
                       href={project.href}
                       target="_blank"
@@ -56,7 +59,7 @@ export default function Projects() {
                       {project.title}
                     </Link>
                   </h3>
-                  <p className="mt-5 text-sm/6 text-gray-600">
+                  <p className="mt-5 text-sm/6 text-muted-foreground">
                     {project.description}
                   </p>
                 </div>
