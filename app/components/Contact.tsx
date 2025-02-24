@@ -4,10 +4,10 @@ export default function Contact() {
   return (
     <div id="contact" className="isolate  px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl sm:text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-balance  sm:text-5xl">
+        <h2 className=" font-semibold tracking-tight text-balance text-3xl  lg:text-4xl  ">
           Get in Touch with Me
         </h2>
-        <p className="mt-2 text-lg/8 ">
+        <p className="mt-2 text-muted-foreground ">
           {' '}
           I&apos;d be delighted to help you. Don&apos;t hesitate to send me an
           email anytime..
@@ -22,11 +22,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className="text-base/7 font-semibold ">Email Me</h3>
-            <p className="mt-2 text-base/7 text-muted-foreground ">
+            <h3 className=" font-semibold ">Email Me</h3>
+            <p className="mt-2  text-muted-foreground ">
               I&apos;m ready to assist you.
             </p>
-            <p className="mt-4 text-sm/6 font-semibold">
+            <p className="mt-4 text-sm font-semibold">
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
                 target="_blank"
@@ -46,11 +46,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className="text-base/7 font-semibold ">Call Me</h3>
-            <p className="mt-2 text-base/7 text-muted-foreground ">
+            <h3 className=" font-semibold ">Call Me</h3>
+            <p className="mt-2  text-muted-foreground ">
               I&apos;m available Mon-Fri, 9am-5pm.
             </p>
-            <p className="mt-4 text-sm/6 font-semibold">
+            <p className="mt-4 text-sm font-semibold">
               <dd className="font-semibold hover:underline">
                 +33 7 69 57 74 67
               </dd>

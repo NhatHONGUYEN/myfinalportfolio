@@ -32,7 +32,7 @@ export default function Hero() {
             <Badge variant="secondary" className="mb-6">
               Nhat-Quan HO NGUYEN
             </Badge>
-            <h1 className="mb-4 text-pretty text-3xl font-medium lg:text-6xl">
+            <h1 className="mb-4 text-3xl  lg:text-4xl text-pretty font-semibold">
               Developper full-stack
             </h1>
             <p className="mx-auto max-w-xl text-muted-foreground">

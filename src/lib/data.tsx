@@ -1,3 +1,5 @@
+import { IconsItem } from './type';
+
 interface NavigationItem {
   name: string;
   href: string;
@@ -92,5 +94,78 @@ export const projects: Project[] = [
     padding: 'mb-10',
     image: '/images/coffea.png',
     href: 'https://coffee-shop-five-jet.vercel.app/',
+  },
+];
+
+export const IconsList: IconsItem[] = [
+  {
+    key: 1,
+    src: 'https://shadcnblocks.com/images/block/logos/github-icon.svg',
+    alt: 'GitHub',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 2,
+    src: 'https://shadcnblocks.com/images/block/logos/tailwind-icon.svg',
+    alt: 'Tailwind CSS',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 3,
+    src: 'https://shadcnblocks.com/images/block/logos/nextjs-icon.svg',
+    alt: 'Next.js',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 4,
+    src: 'https://shadcnblocks.com/images/block/logos/typescript-icon.svg',
+    alt: 'TypeScript',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 5,
+    src: '/images/motion.png',
+    alt: 'Framer Motion',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 6,
+    src: 'https://tanstack.com/favicon.ico', // TanStack Query
+    alt: 'TanStack Query',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 7,
+    src: '/images/prisma.png',
+    alt: 'Prisma',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 8,
+    src: 'https://www.postgresql.org/media/img/about/press/elephant.png', // PostgreSQL
+    alt: 'PostgreSQL',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 9,
+    src: 'https://authjs.dev/img/logo-sm.png', // Auth.js
+    alt: 'Auth.js',
+    width: 64,
+    height: 64,
+  },
+  {
+    key: 10,
+    src: '/images/zustand.png',
+    alt: 'Zustand',
+    width: 96,
+    height: 96,
   },
 ];

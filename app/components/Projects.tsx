@@ -12,10 +12,10 @@ export default function Projects() {
           <Badge variant="secondary" className="mb-6">
             Latest Updates
           </Badge>
-          <h2 className="mb-3 text-pretty text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+          <h2 className="mb-3 text-pretty  font-semibold md:mb-4 text-3xl  lg:text-4xl">
             Discover My Latest Projects
           </h2>
-          <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">
+          <p className="mb-8 text-muted-foreground  lg:max-w-2xl ">
             Explore my latest articles and tutorials on web development, design
             systems, and accessibility.
           </p>
