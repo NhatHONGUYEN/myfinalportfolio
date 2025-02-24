@@ -57,7 +57,8 @@ export const projects: Project[] = [
     description:
       'Anima is the ultimate hub for anime lovers! Dive into a world of detailed information on your favorite shows, from trailers and character breakdowns to voice actors and ratings.',
 
-    image: '/images/Anima.png',
+    image:
+      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/bkr8remsm7dgqrfwkfsf',
     href: 'https://anima-dusky.vercel.app/',
   },
 
@@ -69,7 +70,8 @@ export const projects: Project[] = [
     description:
       'nhathnblog is where I share my personal journey into the world of development. Follow my thoughts, experiences, and lessons as I work towards becoming a developer.',
 
-    image: '/images/blog.png',
+    image:
+      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cylyrlx9ad0ylzi3ijwg',
     href: 'https://nhathnblog.vercel.app/',
   },
   {

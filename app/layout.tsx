@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${workSans.variable} antialiased max-w-5xl mx-auto`}>
         <ThemeProvider
           attribute="class"
