@@ -1,5 +1,4 @@
 const nextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
@@ -31,7 +30,8 @@ const nextConfig = {
         hostname: 'worldvectorlogo.com', // Domaine autorisé
       },
       {
-        domains: ['myfinalportfolio-five.vercel.app'],
+        protocol: 'https',
+        hostname: 'myfinalportfolio-five.vercel.app', // Domaine autorisé
       },
     ],
   },
