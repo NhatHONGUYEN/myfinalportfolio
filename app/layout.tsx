@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import Head from 'next/head';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -20,6 +19,32 @@ export const metadata: Metadata = {
   icons: {
     icon: '/images/coffee.svg',
   },
+  openGraph: {
+    title: 'Nhat Portfolio',
+    description:
+      'A simple portfolio website to present my projects and skills.',
+    url: 'https://myfinalportfolio-five.vercel.app/',
+    siteName: 'Nhat Portfolio',
+    images: [
+      {
+        url: 'https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Nhat Portfolio - A simple portfolio website',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nhat Portfolio',
+    description:
+      'A simple portfolio website to present my projects and skills.',
+    images: [
+      'https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp',
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -29,32 +54,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <Head>
-        <meta property="og:title" content="Nhat Portfolio" />
-        <meta
-          property="og:description"
-          content="A simple portfolio website to present my projects and skills."
-        />
-        <meta
-          property="og:image"
-          content="https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp"
-        />
-        <meta
-          property="og:url"
-          content="https://myfinalportfolio-five.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Nhat Portfolio" />
-        <meta
-          name="twitter:description"
-          content="A simple portfolio website to present my projects and skills."
-        />
-        <meta
-          name="twitter:image"
-          content="https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp"
-        />
-      </Head>
       <body className={`${workSans.variable} antialiased max-w-5xl mx-auto`}>
         <ThemeProvider
           attribute="class"
