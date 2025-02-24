@@ -35,10 +35,13 @@ export default function RootLayout({
           property="og:description"
           content="A simple portfolio website to present my projects and skills."
         />
-        <meta property="og:image" content="URL_de_votre_image" />
+        <meta
+          property="og:image"
+          content="https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp"
+        />
         <meta
           property="og:url"
-          content="https://honguyen-portfolio-g6eu1Syny-nhat-quans-projects.vercel.app/"
+          content="https://myfinalportfolio-five.vercel.app/"
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -49,7 +52,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="/images/projects/photo-profil.webp"
+          content="https://myfinalportfolio-five.vercel.app/images/projects/photo-profil.webp"
         />
       </Head>
       <body className={`${workSans.variable} antialiased max-w-5xl mx-auto`}>
