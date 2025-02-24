@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-32">
       <BlurIn>
-        <div className="container  mx-auto flex flex-col items-center gap-16 lg:px-16">
+        <div className="container w-96 md:w-auto  mx-auto flex flex-col items-center gap-16 lg:px-16">
           <div className="text-center">
             <Badge variant="secondary" className="mb-6">
               Latest Updates
@@ -22,7 +22,7 @@ export default function Projects() {
               design systems, and accessibility.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          <div className="grid  gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {projects.map((project) => (
               <article
                 key={project.id}

@@ -3,9 +3,12 @@ import { BlurIn } from '../../animations/BlurIn';
 
 export default function Contact() {
   return (
-    <section id="contact" className="isolate  px-6 py-24 sm:py-32 lg:px-8">
+    <section
+      id="contact"
+      className="isolate  w-96 lg:w-auto mx-auto px-6 py-24 sm:py-32 lg:px-8"
+    >
       <BlurIn>
-        <div className="mx-auto max-w-2xl sm:text-center">
+        <div className="mx-auto  max-w-2xl sm:text-center">
           <h2 className=" font-semibold tracking-tight text-balance text-3xl  lg:text-4xl  ">
             Get in Touch with Me
           </h2>
