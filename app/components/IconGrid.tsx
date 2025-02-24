@@ -10,7 +10,7 @@ export default function IconGrid() {
           <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
             This is my stack
           </h4>
-          <p className="text-muted-foreground ">
+          <p className="text-muted-foreground w-96 lg:w-auto lg:max-w-5xl">
             Explore the technologies and tools I use every day to build
             innovative solutions.
           </p>

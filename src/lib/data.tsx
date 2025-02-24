@@ -91,7 +91,7 @@ export const projects: Project[] = [
 export const IconsList: IconsItem[] = [
   {
     key: 1,
-    src: 'https://shadcnblocks.com/images/block/logos/github-icon.svg',
+    src: '/images/Github.png',
     alt: 'GitHub',
   },
   {
@@ -101,7 +101,7 @@ export const IconsList: IconsItem[] = [
   },
   {
     key: 3,
-    src: 'https://shadcnblocks.com/images/block/logos/nextjs-icon.svg',
+    src: '/images/NextJs.png',
     alt: 'Next.js',
   },
   {
