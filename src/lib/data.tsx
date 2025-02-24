@@ -1,4 +1,4 @@
-import { IconsItem } from './type';
+import { IconsItem, Project } from './type';
 
 interface NavigationItem {
   name: string;
@@ -48,52 +48,41 @@ export const navigation: NavigationItem[] = [
   },
 ];
 
-interface Project {
-  id: number;
-  date: string;
-  category: string;
-  title: string;
-  description: string;
-  padding: string;
-  image: string;
-  href: string;
-}
-
 export const projects: Project[] = [
   {
     id: 1,
-    date: 'April, 2024',
-    category: 'Showcase Website',
-    title: 'Pedro Pasta',
+    date: 'February, 2025',
+    category: 'Anime Discovery',
+    title: 'Anima',
     description:
-      'Pedro Pasta is a delightful website for our Italian restaurant. Explore our menu, reserve a table, or order online for a quick and delicious meal delivered right to your doorstep.',
-    padding: 'mb-16',
-    image:
-      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/k9g1a5g1mre3h8nbls5w',
-    href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
+      'Anima is the ultimate hub for anime lovers! Dive into a world of detailed information on your favorite shows, from trailers and character breakdowns to voice actors and ratings.',
+
+    image: '/images/Anima.png',
+    href: 'https://anima-dusky.vercel.app/',
   },
 
   {
     id: 2,
     date: 'January, 2025',
-    category: 'Recipe Website',
-    title: 'Meals Finder',
+    category: 'Personal Blog',
+    title: 'nhathnblog',
     description:
-      'Meals Finder is your go-to platform for discovering delicious recipes from around the world. Explore a variety of cuisines, find step-by-step instructions, and enjoy a seamless cooking experience.',
-    padding: 'mb-10',
-    image: '/images/Recipes.jpg',
-    href: 'https://meals-finder-lake.vercel.app/',
+      'nhathnblog is where I share my personal journey into the world of development. Follow my thoughts, experiences, and lessons as I work towards becoming a developer.',
+
+    image: '/images/blog.png',
+    href: 'https://nhathnblog.vercel.app/',
   },
   {
     id: 3,
-    date: 'December, 2024',
-    category: 'E-commerce',
-    title: 'Coffea',
+    date: 'January, 2025',
+    category: 'Showcase Website',
+    title: 'Pedro Pasta',
     description:
-      'Coffea is your online shop for buying the best coffees from around the world. Discover our selection of high-quality beans and enjoy a smooth and secure shopping experience.',
-    padding: 'mb-10',
-    image: '/images/coffea.png',
-    href: 'https://coffee-shop-five-jet.vercel.app/',
+      'Welcome to Pedro Pasta, your go-to place for authentic Italian cuisine! Browse our menu, book a table, or order online for a delicious meal delivered to your doorstep.',
+
+    image:
+      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/k9g1a5g1mre3h8nbls5w',
+    href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
   },
 ];
 
@@ -102,70 +91,70 @@ export const IconsList: IconsItem[] = [
     key: 1,
     src: 'https://shadcnblocks.com/images/block/logos/github-icon.svg',
     alt: 'GitHub',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 2,
     src: 'https://shadcnblocks.com/images/block/logos/tailwind-icon.svg',
     alt: 'Tailwind CSS',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 3,
     src: 'https://shadcnblocks.com/images/block/logos/nextjs-icon.svg',
     alt: 'Next.js',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 4,
     src: 'https://shadcnblocks.com/images/block/logos/typescript-icon.svg',
     alt: 'TypeScript',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 5,
     src: '/images/motion.png',
     alt: 'Framer Motion',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 6,
     src: 'https://tanstack.com/favicon.ico', // TanStack Query
     alt: 'TanStack Query',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 7,
     src: '/images/prisma.png',
     alt: 'Prisma',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 8,
     src: 'https://www.postgresql.org/media/img/about/press/elephant.png', // PostgreSQL
     alt: 'PostgreSQL',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 9,
     src: 'https://authjs.dev/img/logo-sm.png', // Auth.js
     alt: 'Auth.js',
-    width: 64,
-    height: 64,
+    width: 48,
+    height: 48,
   },
   {
     key: 10,
     src: '/images/zustand.png',
     alt: 'Zustand',
-    width: 96,
-    height: 96,
+    width: 72,
+    height: 72,
   },
 ];

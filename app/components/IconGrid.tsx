@@ -9,11 +9,12 @@ export default function IconGrid() {
         <div className="container">
           {/* Heading Section */}
           <div className="flex flex-col items-center justify-center gap-4 text-center">
-            <h4 className="text-pretty font-semibold text-3xl  lg:text-4xl">
+            <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
               This is my stack
             </h4>
-            <p className="text-muted-foreground  lg:-mt-1">
-              From next-gen startups to established enterprises
+            <p className="text-muted-foreground ">
+              Explore the technologies and tools I use every day to build
+              innovative solutions.
             </p>
           </div>
 
