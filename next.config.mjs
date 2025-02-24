@@ -30,6 +30,9 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'worldvectorlogo.com', // Domaine autorisé
       },
+      {
+        domains: ['myfinalportfolio-five.vercel.app'],
+      },
     ],
   },
 };
