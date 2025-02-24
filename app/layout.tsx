@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -41,6 +42,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ScrollToTopButton />
           </div>
         </ThemeProvider>
       </body>
