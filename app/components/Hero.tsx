@@ -26,7 +26,7 @@ export default function Hero() {
       : '/images/projects/Nhatdark.jpg';
 
   return (
-    <section id="about" className="py-32 mt-20">
+    <section id="about" className="py-32  mt-20">
       <div className="container">
         <div className="z-10 mx-auto flex max-w-4xl flex-col items-center gap-14 text-center">
           <Avatar className="w-52 h-52">
@@ -49,7 +49,7 @@ export default function Hero() {
             <h1 className="mb-4 text-3xl lg:text-4xl text-pretty font-semibold">
               Developer full-stack
             </h1>
-            <p className="mx-auto w-96 sm:w-auto sm:max-w-xl text-muted-foreground">
+            <p className="mx-auto w-80 sm:w-auto sm:max-w-xl text-muted-foreground">
               I am a web developer based in Paris, passionate about coding and
               the opportunity to create cool stuff. Each project is a new
               adventure, pushing the boundaries of technology to deliver

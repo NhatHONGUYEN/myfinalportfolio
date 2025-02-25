@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="isolate  w-96 lg:w-auto mx-auto px-6 py-24 sm:py-32 lg:px-8"
+      className="isolate  w-80 lg:w-auto mx-auto px-6 py-24 sm:py-32 lg:px-8"
     >
       <div className="mx-auto  max-w-2xl sm:text-center">
         <h2 className=" font-semibold tracking-tight text-balance text-3xl  lg:text-4xl  ">

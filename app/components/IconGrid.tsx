@@ -10,14 +10,14 @@ export default function IconGrid() {
           <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
             This is my stack
           </h4>
-          <p className="text-muted-foreground w-96 lg:w-auto lg:max-w-5xl">
+          <p className="text-muted-foreground w-80 lg:w-auto lg:max-w-5xl">
             Explore the technologies and tools I use every day to build
             innovative solutions.
           </p>
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-3 w-96 mx-auto md:w-auto md:grid-cols-4 lg:grid-cols-5 gap-6 mt-20">
+        <div className="grid grid-cols-3 w-80 mx-auto md:w-auto md:grid-cols-4 lg:grid-cols-5 gap-6 mt-20">
           {IconsList.map((icon) => (
             <div key={icon.key} className="p-4 flex justify-center">
               <Image
