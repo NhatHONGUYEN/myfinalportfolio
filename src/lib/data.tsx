@@ -45,6 +45,18 @@ export const navigation: NavigationItem[] = [
 export const projects: Project[] = [
   {
     id: 1,
+    date: 'Mars, 2025',
+    category: 'Language Learning',
+    title: 'Mocou',
+    description:
+      'A fun and interactive platform to learn Korean featuring the adorable Pochacco character. Explore lessons, practice exercises, and track your progress as Pochacco guides you through your Korean language journey.',
+    image:
+      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cznrzf6wnnixp9vcvnen',
+    href: 'https://mocou.vercel.app/',
+  },
+
+  {
+    id: 2,
     date: 'February, 2025',
     category: 'Anime Discovery',
     title: 'Anima',
@@ -57,7 +69,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     date: 'January, 2025',
     category: 'Personal Blog',
     title: 'nhathnblog',
@@ -67,18 +79,6 @@ export const projects: Project[] = [
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cylyrlx9ad0ylzi3ijwg',
     href: 'https://nhathnblog.vercel.app/',
-  },
-  {
-    id: 3,
-    date: 'January, 2025',
-    category: 'Showcase Website',
-    title: 'Pedro Pasta',
-    description:
-      'Welcome to Pedro Pasta, your go-to place for authentic Italian cuisine! Browse our menu, book a table, or order online for a delicious meal delivered to your doorstep.',
-
-    image:
-      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/k9g1a5g1mre3h8nbls5w',
-    href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
   },
 ];
 
