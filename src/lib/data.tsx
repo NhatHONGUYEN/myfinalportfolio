@@ -46,6 +46,17 @@ export const projects: Project[] = [
   {
     id: 1,
     date: 'Mars, 2025',
+    category: 'Healthcare',
+    title: 'DocBoard',
+    description:
+      'A comprehensive platform for scheduling appointments between patients and doctors, featuring an intuitive dashboard. Manage your appointments, view your medical history, and stay connected with your healthcare providers effortlessly.',
+    image: '/images/projects/DocBoard - Medical Dashboard.png',
+    href: 'https://doc-board.vercel.app/',
+  },
+
+  {
+    id: 2,
+    date: 'Mars, 2025',
     category: 'Language Learning',
     title: 'Mocou',
     description:
@@ -56,7 +67,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     date: 'February, 2025',
     category: 'Anime Discovery',
     title: 'Anima',
@@ -66,19 +77,6 @@ export const projects: Project[] = [
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/bkr8remsm7dgqrfwkfsf',
     href: 'https://anima-dusky.vercel.app/',
-  },
-
-  {
-    id: 3,
-    date: 'January, 2025',
-    category: 'Personal Blog',
-    title: 'nhathnblog',
-    description:
-      'nhathnblog is where I share my personal journey into the world of development. Follow my thoughts, experiences, and lessons as I work towards becoming a developer.',
-
-    image:
-      'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cylyrlx9ad0ylzi3ijwg',
-    href: 'https://nhathnblog.vercel.app/',
   },
 ];
 
