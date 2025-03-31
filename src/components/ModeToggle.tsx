@@ -3,22 +3,21 @@
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 
 export function ModeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = React.useState(false);
 
   // Ensure the component is only mounted on the client
-  useEffect(() => {
+  React.useEffect(() => {
     setMounted(true);
   }, []);
 
   // Show nothing until mounted (avoids hydration mismatch)
   if (!mounted) {
-    return <Button variant="outline" size="icon" disabled />;
+    return <Button variant="outline" size="icon" className="opacity-0" />;
   }
 
   return (

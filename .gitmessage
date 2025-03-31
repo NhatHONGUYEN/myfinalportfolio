@@ -1,6 +1,8 @@
-# <emoji> <type>(<scope>): <description>
+# <emoji> <module> > <description>
 #
-# Types disponibles avec émojis:
+# IMPORTANT: All commit messages MUST be in English
+#
+# Types with emojis:
 #   ✨ feat     (new feature)
 #   🐛 fix      (bug fix)
 #   📝 docs     (documentation changes)
@@ -15,24 +17,33 @@
 #   🔒 security (security improvements)
 #   🚀 deploy   (deployment changes)
 #
-# Scope est optionnel et peut être n'importe quelle partie du projet affectée
+# Module examples: components, api, utils, auth, ui, etc.
 #
-# Description doit être en anglais et utiliser l'impératif présent
-# Ne pas mettre de point à la fin
+# Description must:
+# 1. Be in English
+# 2. Use imperative mood ("add" not "added" or "adds")
+# 3. Start with lowercase
+# 4. Not end with a period
 #
-# Exemple: ✨ feat(auth): add Google OAuth login
+# Examples:
+# ✨ components > add new theme switcher
+# 🐛 api > fix user authentication flow
+# ♻️ utils > refactor date formatting functions
 #
-# Corps du message (optionnel):
-#   - Expliquer le "quoi" et le "pourquoi"
-#   - Limiter à 72 caractères par ligne
+# Message body:
+# - Use bullet points for changes
+# - Keep it short and clear
+# - Focus on what changed
 #
-# Pied de page (optionnel):
-#   - Breaking changes
-#   - Références aux issues
+# Example body:
+# - Add dark mode support
+# - Implement theme persistence
+# - Fix hydration issues
 #
-# BREAKING CHANGE: <description>
-# Closes #<issue>
+# Footer (optional):
+# - Reference issues and PRs
+# - BREAKING CHANGE: <description>
 #
-# Extensions VS Code recommandées:
+# VS Code Extensions:
 # - Gitmoji (seatonjiang.gitmoji-vscode)
 # - Conventional Commits (vivaxy.vscode-conventional-commits) 
