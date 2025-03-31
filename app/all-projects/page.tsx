@@ -10,14 +10,6 @@ export default function AllProjects() {
   return (
     <section className="py-32">
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
-        <div className="w-full flex justify-end">
-          <Link href="/">
-            <Button className="gap-2">
-              <ArrowLeft className="h-4 w-4" />
-              Retour
-            </Button>
-          </Link>
-        </div>
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
             Tous les Projets
@@ -78,6 +70,14 @@ export default function AllProjects() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="w-full flex justify-center">
+          <Link href="/">
+            <Button className="gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Découvrir mon profil
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

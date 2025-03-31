@@ -32,7 +32,7 @@ export default function Hero() {
                 target="_blank"
               >
                 <Button size="lg" aria-label="Me contacter par email">
-                  Me contacter
+                  Me contacter par mail
                 </Button>
               </Link>
               <Link href="https://github.com/NhatHONGUYEN" target="_blank">
@@ -42,7 +42,7 @@ export default function Hero() {
                   className="group"
                   aria-label="Visiter mon profil GitHub"
                 >
-                  GitHub
+                  Explorer mes projets
                   <MoveRight
                     className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                     strokeWidth={1}

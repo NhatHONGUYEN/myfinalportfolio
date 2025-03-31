@@ -71,9 +71,7 @@ export default function Projects() {
           ))}
         </div>
         <Link href="/all-projects">
-          <Button variant="outline" size="lg">
-            Plus de Projets
-          </Button>
+          <Button size="lg">Plus de Projets</Button>
         </Link>
       </div>
     </section>
