@@ -77,6 +77,16 @@ export const projects: Project[] = [
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/bkr8remsm7dgqrfwkfsf',
     href: 'https://anima-dusky.vercel.app/',
   },
+  {
+    id: 4,
+    date: 'Janvier, 2025',
+    category: "Découverte d'Anime",
+    title: 'PedroPasta',
+    description:
+      "Anima est le hub ultime pour les amateurs d'anime ! Plongez dans un monde d'informations détaillées sur vos séries préférées, des bandes-annonces aux analyses des personnages, en passant par les doubleurs et les notes.",
+    image: '/images/projects/PedroPasta.png',
+    href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
+  },
 ];
 
 export const IconsList: IconsItem[] = [
