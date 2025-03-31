@@ -1,0 +1,38 @@
+# <emoji> <type>(<scope>): <description>
+#
+# Types disponibles avec émojis:
+#   ✨ feat     (new feature)
+#   🐛 fix      (bug fix)
+#   📝 docs     (documentation changes)
+#   💄 style    (formatting, missing semi colons, etc; no code change)
+#   ♻️  refactor (refactoring production code)
+#   ⚡️ perf     (performance improvements)
+#   ✅ test     (adding missing tests, refactoring tests)
+#   🔧 chore    (updating grunt tasks etc; no production code change)
+#   👷 ci       (changes to CI configuration files and scripts)
+#   📦 build    (changes that affect the build system or dependencies)
+#   🎨 ui       (user interface changes)
+#   🔒 security (security improvements)
+#   🚀 deploy   (deployment changes)
+#
+# Scope est optionnel et peut être n'importe quelle partie du projet affectée
+#
+# Description doit être en anglais et utiliser l'impératif présent
+# Ne pas mettre de point à la fin
+#
+# Exemple: ✨ feat(auth): add Google OAuth login
+#
+# Corps du message (optionnel):
+#   - Expliquer le "quoi" et le "pourquoi"
+#   - Limiter à 72 caractères par ligne
+#
+# Pied de page (optionnel):
+#   - Breaking changes
+#   - Références aux issues
+#
+# BREAKING CHANGE: <description>
+# Closes #<issue>
+#
+# Extensions VS Code recommandées:
+# - Gitmoji (seatonjiang.gitmoji-vscode)
+# - Conventional Commits (vivaxy.vscode-conventional-commits) 
