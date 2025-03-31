@@ -11,14 +11,14 @@ export default function Projects() {
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
-            Latest Updates
+            Mes Réalisations
           </Badge>
           <h2 className="mb-3 text-pretty font-semibold md:mb-4 text-3xl lg:text-4xl">
-            Discover My Latest Projects
+            Découvrez Mes Projets
           </h2>
           <p className="mb-8 text-muted-foreground lg:max-w-2xl">
-            Explore my latest articles and tutorials on web development, design
-            systems, and accessibility.
+            Une sélection de mes projets web, démontrant mes compétences en
+            développement d&apos;applications modernes et performantes.
           </p>
         </div>
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
@@ -72,7 +72,7 @@ export default function Projects() {
         </div>
         <Link href="/all-projects">
           <Button variant="outline" size="lg">
-            More Projects
+            Plus de Projets
           </Button>
         </Link>
       </div>

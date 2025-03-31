@@ -8,11 +8,11 @@ export default function IconGrid() {
         {/* Heading Section */}
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
-            This is my stack
+            Ma Stack Technique
           </h4>
           <p className="text-muted-foreground w-80 lg:w-auto lg:max-w-5xl">
-            Explore the technologies and tools I use every day to build
-            innovative solutions.
+            Technologies et outils que je maîtrise pour le développement web
+            moderne
           </p>
         </div>
 

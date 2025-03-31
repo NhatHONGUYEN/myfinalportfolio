@@ -20,14 +20,14 @@ export default function AllProjects() {
         </div>
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
-            All Projects
+            Tous les Projets
           </Badge>
           <h1 className="mb-3 text-pretty font-semibold md:mb-4 text-3xl lg:text-4xl">
-            My Complete Portfolio
+            Mon Portfolio Complet
           </h1>
           <p className="mb-8 text-muted-foreground lg:max-w-2xl">
-            A comprehensive collection of my work, including web applications,
-            design systems, and more.
+            Une collection complète de mes réalisations, incluant des
+            applications web, des systèmes de design, et bien plus encore.
           </p>
         </div>
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">

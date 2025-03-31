@@ -46,10 +46,10 @@ export const projects: Project[] = [
   {
     id: 1,
     date: 'Mars, 2025',
-    category: 'Healthcare',
+    category: 'Santé',
     title: 'DocBoard',
     description:
-      'A comprehensive platform for scheduling appointments between patients and doctors, featuring an intuitive dashboard. Manage your appointments, view your medical history, and stay connected with your healthcare providers effortlessly.',
+      "Une plateforme complète pour la prise de rendez-vous entre patients et médecins, dotée d'un tableau de bord intuitif. Gérez vos rendez-vous, consultez votre historique médical et restez connecté avec vos professionnels de santé sans effort.",
     image: '/images/projects/DocBoard - Medical Dashboard.png',
     href: 'https://doc-board.vercel.app/',
   },
@@ -57,10 +57,10 @@ export const projects: Project[] = [
   {
     id: 2,
     date: 'Mars, 2025',
-    category: 'Language Learning',
+    category: 'Apprentissage des Langues',
     title: 'Mocou',
     description:
-      'A fun and interactive platform to learn Korean featuring the adorable Pochacco character. Explore lessons, practice exercises, and track your progress as Pochacco guides you through your Korean language journey.',
+      'Une plateforme ludique et interactive pour apprendre le coréen avec le personnage adorable Pochacco. Explorez les leçons, pratiquez des exercices et suivez votre progression alors que Pochacco vous guide dans votre apprentissage du coréen.',
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cznrzf6wnnixp9vcvnen',
     href: 'https://mocou.vercel.app/',
@@ -68,12 +68,11 @@ export const projects: Project[] = [
 
   {
     id: 3,
-    date: 'February, 2025',
-    category: 'Anime Discovery',
+    date: 'Février, 2025',
+    category: "Découverte d'Anime",
     title: 'Anima',
     description:
-      'Anima is the ultimate hub for anime lovers! Dive into a world of detailed information on your favorite shows, from trailers and character breakdowns to voice actors and ratings.',
-
+      "Anima est le hub ultime pour les amateurs d'anime ! Plongez dans un monde d'informations détaillées sur vos séries préférées, des bandes-annonces aux analyses des personnages, en passant par les doubleurs et les notes.",
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/bkr8remsm7dgqrfwkfsf',
     href: 'https://anima-dusky.vercel.app/',

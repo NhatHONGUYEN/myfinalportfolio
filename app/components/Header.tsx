@@ -12,8 +12,8 @@ import MobileHeader from './MobileHeader';
 
 // Mise à jour des liens
 const navigationsLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'À propos', href: '#about' },
+  { label: 'Projets', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
 

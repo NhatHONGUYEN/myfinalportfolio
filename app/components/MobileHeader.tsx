@@ -7,8 +7,8 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { HamburgerButton } from './ui/hamburger-button';
 
 const navigationsLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'À propos', href: '#about' },
+  { label: 'Projets', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
 

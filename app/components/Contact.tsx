@@ -8,12 +8,12 @@ export default function Contact() {
     >
       <div className="mx-auto  max-w-2xl sm:text-center">
         <h2 className=" font-semibold tracking-tight text-balance text-3xl  lg:text-4xl  ">
-          Get in Touch with Me
+          Contactez-moi
         </h2>
         <p className="mt-2 text-muted-foreground ">
-          {' '}
-          I&apos;d be delighted to help you. Don&apos;t hesitate to send me an
-          email anytime..
+          Je recherche activement une alternance en développement web.
+          N&apos;hésitez pas à me contacter si vous avez des opportunités à me
+          proposer.
         </p>
       </div>
       <div className="mx-auto mt-20 max-w-lg space-y-16">
@@ -25,9 +25,9 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className=" font-semibold ">Email Me</h3>
+            <h3 className=" font-semibold ">Email</h3>
             <p className="mt-2  text-muted-foreground ">
-              I&apos;m ready to assist you.
+              Je serai ravi de recevoir vos propositions d&apos;alternance.
             </p>
             <p className="mt-4 text-sm font-semibold">
               <a
@@ -49,9 +49,10 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className=" font-semibold ">Call Me</h3>
+            <h3 className=" font-semibold ">Téléphone</h3>
             <p className="mt-2  text-muted-foreground ">
-              I&apos;m available Mon-Fri, 9am-5pm.
+              Je suis disponible pour échanger sur vos opportunités
+              d&apos;alternance.
             </p>
             <p className="mt-4 text-sm font-semibold">
               <span className="font-semibold hover:underline">
