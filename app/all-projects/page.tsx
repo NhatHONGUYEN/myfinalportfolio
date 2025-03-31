@@ -3,22 +3,21 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
-export default function Projects() {
+export default function AllProjects() {
   return (
-    <section id="projects" className="py-32">
+    <section className="py-32">
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
-            Latest Updates
+            All Projects
           </Badge>
-          <h2 className="mb-3 text-pretty font-semibold md:mb-4 text-3xl lg:text-4xl">
-            Discover My Latest Projects
-          </h2>
+          <h1 className="mb-3 text-pretty font-semibold md:mb-4 text-3xl lg:text-4xl">
+            My Complete Portfolio
+          </h1>
           <p className="mb-8 text-muted-foreground lg:max-w-2xl">
-            Explore my latest articles and tutorials on web development, design
-            systems, and accessibility.
+            A comprehensive collection of my work, including web applications,
+            design systems, and more.
           </p>
         </div>
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
@@ -70,11 +69,6 @@ export default function Projects() {
             </article>
           ))}
         </div>
-        <Link href="/all-projects">
-          <Button variant="outline" size="lg">
-            More Projects
-          </Button>
-        </Link>
       </div>
     </section>
   );

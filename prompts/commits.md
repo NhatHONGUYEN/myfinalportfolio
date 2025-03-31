@@ -5,12 +5,14 @@
 Chaque message de commit doit suivre le format suivant :
 
 ```
-<emoji> <type>(<scope>): <description>
+<emoji> <component> > <description in english>
 
 [optional body]
 
 [optional footer]
 ```
+
+**Important : All commit messages MUST be written in English**
 
 ### Types de Commit avec Émojis
 
@@ -34,51 +36,54 @@ Chaque message de commit doit suivre le format suivant :
 
 ```bash
 # Nouvelle fonctionnalité
-✨ feat(auth): add login with Google
+✨ Auth > Add login with Google
 
 # Correction de bug
-🐛 fix(header): resolve mobile menu closing issue
+🐛 Header > Fix mobile menu closing issue
 
 # Refactorisation
-♻️ refactor(components): split Header into smaller components
+♻️ Components > Split Header into smaller components
 
 # Documentation
-📝 docs(readme): update installation instructions
+📝 Readme > Update installation instructions
 
 # Style
-💄 style(button): improve hover animation
+💄 Button > Improve hover animation
 
 # Interface utilisateur
-🎨 ui(dashboard): redesign analytics charts
+🎨 Dashboard > Redesign analytics charts
 
 # Sécurité
-🔒 security(api): implement rate limiting
+🔒 API > Implement rate limiting
 ```
 
 #### ❌ À éviter :
 
 ```bash
 # Messages trop vagues
-update stuff
-fixed bug
-changed something
+✨ Auth > update stuff
+🐛 Header > fixed bug
+♻️ Components > changed something
 
-# Messages en français
-ajout de la connexion
-correction du menu
+# Messages en français (INTERDIT)
+✨ Auth > ajout de la connexion
+🐛 Menu > correction du bug
 
-# Émojis mal utilisés ou manquants
-feat: add login
-🐛 added new feature
+# Mauvais format
+feat: Auth > add login
+🐛 added new feature in header
 ```
 
 ### Règles pour la Description
 
-1. **Emoji** : Toujours commencer par l'emoji approprié
-2. **Tense** : Utiliser l'impératif présent ("add" pas "added")
-3. **Longueur** : Maximum 72 caractères
-4. **Ponctuation** : Pas de point à la fin
-5. **Capitalisation** : Première lettre en majuscule
+1. **Langue** : TOUJOURS en anglais
+2. **Emoji** : Toujours commencer par l'emoji approprié
+3. **Component** : Spécifier le composant/module concerné
+4. **Séparateur** : Utiliser ">" entre le composant et la description
+5. **Tense** : Utiliser l'impératif présent en anglais ("add" pas "added")
+6. **Longueur** : Maximum 72 caractères
+7. **Ponctuation** : Pas de point à la fin
+8. **Capitalisation** : Première lettre en majuscule
 
 ### Corps du Message (Optionnel)
 
