@@ -60,8 +60,18 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    date: 'Février, 2025',
+    category: 'Blog',
+    title: 'NhatBlog',
+    description:
+      "Mon journal intime de développeur où je partage mes expériences, mes conseils et mes apprentissages dans le monde du développement web. Un espace personnel pour documenter mon parcours et aider d'autres développeurs dans leur transition.",
+    image: '/images/projects/blog.webp',
+    href: 'https://nhathnblog.vercel.app/',
+  },
+  {
+    id: 5,
     date: 'Janvier, 2025',
-    category: "Découverte d'Anime",
+    category: 'Restaurant',
     title: 'PedroPasta',
     description:
       'Un restaurant italien authentique spécialisé dans les pâtes fraîches. Découvrez notre menu varié de pâtes artisanales, préparées avec des ingrédients de qualité et des recettes traditionnelles italiennes.',
@@ -69,7 +79,7 @@ export const projects: Project[] = [
     href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     date: 'Janvier, 2025',
     category: 'Culinaire',
     title: 'Meals Finder',
@@ -79,7 +89,7 @@ export const projects: Project[] = [
     href: 'https://meals-finder-lake.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     date: 'Décembre, 2024',
     category: 'E-commerce',
     title: 'Coffea',
@@ -89,7 +99,7 @@ export const projects: Project[] = [
     href: 'https://coffee-shop-five-jet.vercel.app/',
   },
   {
-    id: 7,
+    id: 8,
     date: 'Juillet, 2024',
     category: 'Mode',
     title: 'Wakaranai',
@@ -99,7 +109,7 @@ export const projects: Project[] = [
     href: 'https://wakaranai-alpha.vercel.app/',
   },
   {
-    id: 8,
+    id: 9,
     date: 'Juillet, 2024',
     category: 'Portfolio',
     title: 'Portfoliov2',
@@ -109,7 +119,7 @@ export const projects: Project[] = [
     href: 'https://portfolio-v2-mu-neon.vercel.app/',
   },
   {
-    id: 9,
+    id: 10,
     date: 'Juin, 2024',
     category: 'Restaurant',
     title: 'Barameyv3',
@@ -119,7 +129,7 @@ export const projects: Project[] = [
     href: 'https://barameyv3.vercel.app/',
   },
   {
-    id: 10,
+    id: 11,
     date: 'Avril, 2024',
     category: 'Restaurant',
     title: 'Sushi-SenSation',
@@ -129,7 +139,7 @@ export const projects: Project[] = [
     href: 'https://sushi-sensation.vercel.app/',
   },
   {
-    id: 11,
+    id: 12,
     date: 'Avril, 2024',
     category: 'Portfolio',
     title: 'Nhatflix',
