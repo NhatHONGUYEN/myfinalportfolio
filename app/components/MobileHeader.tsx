@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { ModeToggle } from '@/components/ModeToggle';
-import { HamburgerButton } from './ui/hamburger-button';
+import { HamburgerButton } from '../../src/components/ui/hamburger-button';
 
 const navigationsLinks = [
   { label: 'À propos', href: '#about' },
