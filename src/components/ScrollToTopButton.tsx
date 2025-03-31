@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const label = 'Go to top';
+  const label = 'Retour en haut';
   return (
     <div className="fixed bottom-4 right-4">
       <Button onClick={scrollToTop} size="lg" className="group flex-col">
