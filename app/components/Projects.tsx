@@ -22,7 +22,7 @@ export default function Projects() {
           </p>
         </div>
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {projects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <article
               key={project.id}
               className="flex flex-col items-start justify-between relative group"

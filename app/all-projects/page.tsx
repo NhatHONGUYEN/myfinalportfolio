@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { MoveLeft } from 'lucide-react';
 
 export default function AllProjects() {
   return (
@@ -22,7 +22,7 @@ export default function AllProjects() {
             applications web, des systèmes de design, et bien plus encore.
           </p>
         </div>
-        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.id}
@@ -73,8 +73,16 @@ export default function AllProjects() {
         </div>
         <div className="w-full flex justify-center">
           <Link href="/">
-            <Button className="gap-2">
-              <ArrowLeft className="h-4 w-4" />
+            <Button
+              size="lg"
+              variant="secondary"
+              className="group"
+              aria-label="Retour à l'accueil"
+            >
+              <MoveLeft
+                className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+                strokeWidth={1}
+              />
               Découvrir mon profil
             </Button>
           </Link>

@@ -83,9 +83,79 @@ export const projects: Project[] = [
     category: "Découverte d'Anime",
     title: 'PedroPasta',
     description:
-      "Anima est le hub ultime pour les amateurs d'anime ! Plongez dans un monde d'informations détaillées sur vos séries préférées, des bandes-annonces aux analyses des personnages, en passant par les doubleurs et les notes.",
-    image: '/images/projects/PedroPasta.png',
+      'Un restaurant italien authentique spécialisé dans les pâtes fraîches. Découvrez notre menu varié de pâtes artisanales, préparées avec des ingrédients de qualité et des recettes traditionnelles italiennes.',
+    image: '/images/projects/PedroPasta.jpg',
     href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
+  },
+  {
+    id: 5,
+    date: 'Janvier, 2025',
+    category: 'Culinaire',
+    title: 'Meals Finder',
+    description:
+      "Une application web intuitive pour découvrir et explorer des milliers de recettes. Recherchez par ingrédients, type de plat ou temps de préparation, et trouvez l'inspiration pour vos prochains repas.",
+    image: '/images/projects/Recipes.png',
+    href: 'https://meals-finder-lake.vercel.app/',
+  },
+  {
+    id: 6,
+    date: 'Décembre, 2024',
+    category: 'E-commerce',
+    title: 'Coffea',
+    description:
+      "Une boutique en ligne spécialisée dans la vente de cafés de qualité. Découvrez notre sélection de grains de café, moulus ou en capsules, provenant des meilleures régions productrices. Une expérience d'achat simple et rapide pour tous les amateurs de café.",
+    image: '/images/projects/coffea.png',
+    href: 'https://coffee-shop-five-jet.vercel.app/',
+  },
+  {
+    id: 7,
+    date: 'Juillet, 2024',
+    category: 'Mode',
+    title: 'Wakaranai',
+    description:
+      "Une boutique en ligne de vêtements tendance et de qualité. Découvrez notre collection de vêtements streetwear et fashion, alliant style japonais et tendances contemporaines. Une expérience d'achat simple pour tous les passionnés de mode.",
+    image: '/images/projects/wakaranai.png',
+    href: 'https://wakaranai-alpha.vercel.app/',
+  },
+  {
+    id: 8,
+    date: 'Juillet, 2024',
+    category: 'Portfolio',
+    title: 'Portfoliov2',
+    description:
+      'Mon premier portfolio développé avec React, présentant mes projets et compétences. Une interface moderne et responsive qui met en valeur mon travail de développeur web.',
+    image: '/images/projects/Nhatv2.jpg',
+    href: 'https://portfolio-v2-mu-neon.vercel.app/',
+  },
+  {
+    id: 9,
+    date: 'Juin, 2024',
+    category: 'Restaurant',
+    title: 'Barameyv3',
+    description:
+      "Un site web élégant pour un restaurant moderne. Présente le menu, les spécialités et l'ambiance du restaurant avec une interface utilisateur intuitive et attrayante. Une expérience en ligne qui reflète la qualité du service en salle.",
+    image: '/images/projects/baramey.jpg',
+    href: 'https://barameyv3.vercel.app/',
+  },
+  {
+    id: 10,
+    date: 'Avril, 2024',
+    category: 'Restaurant',
+    title: 'Sushi-SenSation',
+    description:
+      'Un restaurant japonais spécialisé dans les sushis et la cuisine nippone. Découvrez notre sélection de sushis frais, maki et plats traditionnels, préparés avec des ingrédients de première qualité. Une expérience culinaire authentique qui vous transporte au Japon.',
+    image: '/images/projects/sushi.png',
+    href: 'https://sushi-sensation.vercel.app/',
+  },
+  {
+    id: 11,
+    date: 'Avril, 2024',
+    category: 'Portfolio',
+    title: 'Nhatflix',
+    description:
+      'Un CV interactif et dynamique présentant mon parcours de danseur. Découvrez mes performances, mes styles de danse et mon expérience à travers une interface moderne et immersive. Une présentation unique qui met en valeur mon art et ma passion pour la danse.',
+    image: '/images/projects/light.jpg',
+    href: 'https://nhatflix.vercel.app/',
   },
 ];
 
