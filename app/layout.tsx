@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
 import './globals.css';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
@@ -68,7 +67,6 @@ export default function RootLayout({
             <ParticlesBackGround />
           </div>
           <div className="relative z-10">
-            <Header />
             {children}
             <Footer />
             <ScrollToTopButton />
