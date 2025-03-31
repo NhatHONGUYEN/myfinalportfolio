@@ -3,11 +3,21 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 export default function AllProjects() {
   return (
     <section className="py-32">
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
+        <div className="w-full flex justify-end">
+          <Link href="/">
+            <Button className="gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Retour
+            </Button>
+          </Link>
+        </div>
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
             All Projects
