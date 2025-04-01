@@ -40,6 +40,18 @@
     "phone": {
       "title": "Phone",
       "description": "I am available to discuss your apprenticeship opportunities."
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Your message has been sent successfully. Thank you!",
+      "error": "An error occurred. Please try again.",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "minLength": "This field must contain at least {min} characters",
+      "maxLength": "This field must not exceed {max} characters"
     }
   },
   "ui": {

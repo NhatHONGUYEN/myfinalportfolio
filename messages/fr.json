@@ -40,6 +40,18 @@
     "phone": {
       "title": "Téléphone",
       "description": "Je suis disponible pour échanger sur vos opportunités d'alternance."
+    },
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer",
+      "success": "Votre message a été envoyé avec succès. Merci !",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "required": "Ce champ est requis",
+      "invalidEmail": "Veuillez entrer une adresse email valide",
+      "minLength": "Ce champ doit contenir au moins {min} caractères",
+      "maxLength": "Ce champ ne doit pas dépasser {max} caractères"
     }
   },
   "ui": {
