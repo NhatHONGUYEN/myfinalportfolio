@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function IconGrid() {
   return (
-    <section className="py-32">
+    <section className="py-32 max-w-5xl mx-auto">
       <div className="container">
         {/* Heading Section */}
         <div className="flex flex-col items-center justify-center gap-4 text-center">

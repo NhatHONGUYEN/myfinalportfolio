@@ -9,7 +9,7 @@ export default function Hero() {
   const t = useTranslations('hero');
 
   return (
-    <section id="about" className="py-32  mt-20">
+    <section id="about" className="py-32  mt-20 max-w-5xl mx-auto">
       <div className="container">
         <div className="z-10 mx-auto flex max-w-4xl flex-col items-center gap-14 text-center">
           <ThemeAvatar />
