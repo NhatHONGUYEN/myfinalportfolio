@@ -5,6 +5,10 @@ import Footer from './components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
+import { hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import ClientWrapper from './components/ClientWrapper';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -49,13 +53,28 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch {
+    notFound();
+  }
+
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={`${workSans.variable} antialiased max-w-5xl mx-auto`}>
         <ThemeProvider
           attribute="class"
@@ -66,11 +85,13 @@ export default function RootLayout({
           <div className="fixed inset-0 -z-10">
             <ParticlesBackGround />
           </div>
-          <div className="relative z-10">
-            {children}
-            <Footer />
-            <ScrollToTopButton />
-          </div>
+          <ClientWrapper messages={messages} locale={locale}>
+            <div className="relative z-10">
+              {children}
+              <Footer />
+              <ScrollToTopButton />
+            </div>
+          </ClientWrapper>
         </ThemeProvider>
       </body>
     </html>

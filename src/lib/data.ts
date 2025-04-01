@@ -1,9 +1,9 @@
-import { IconsItem, NavigationItem, Project } from './type';
 import {
-  InstagramIcon,
   GitHubIcon,
+  InstagramIcon,
   TwitterIcon,
-} from '../../app/components/SocialIcons';
+} from '../../app/[locale]/components/SocialIcons';
+import { IconsItem, NavigationItem, Project } from './type';
 
 export const navigation: NavigationItem[] = [
   {

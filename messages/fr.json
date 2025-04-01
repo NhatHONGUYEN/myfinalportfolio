@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "badge": "Nhat-Quan HO NGUYEN",
+    "title": "Développeur Full-Stack",
+    "description": "Développeur Full-Stack spécialisé en React, Next.js et Node.js. Je crée des applications web modernes et performantes, et je recherche actuellement une alternance pour développer mes compétences.",
+    "buttons": {
+      "contact": "Me contacter par mail",
+      "projects": "Explorer mes projets"
+    }
+  },
+  "metadata": {
+    "title": "Nhat Portfolio",
+    "description": "Un site portfolio simple pour présenter mes projets et compétences."
+  }
+}
