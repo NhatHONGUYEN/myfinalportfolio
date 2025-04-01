@@ -48,7 +48,7 @@ export default function MobileHeader() {
               {link.label}
             </Link>
           ))}
-          <div className="flex flex-col items-center gap-6 py-4 border-t border-border mt-4">
+          <div className="flex items-center gap-4 py-4 border-t border-border mt-4">
             <ModeToggle />
             <LanguageSwitcher />
           </div>

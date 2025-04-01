@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section id="about" className="py-32  mt-20 max-w-5xl mx-auto">
-      <div className="container">
+      <div className="container p-8">
         <div className="z-10 mx-auto flex max-w-4xl flex-col items-center gap-14 text-center">
           <ThemeAvatar />
 
@@ -26,12 +26,16 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row">
-            <div className="mt-4 flex justify-center gap-2">
+            <div className="mt-4 flex flex-col w-full justify-center gap-2 sm:flex-row">
               <Link
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
                 target="_blank"
               >
-                <Button size="lg" aria-label={t('buttons.contact')}>
+                <Button
+                  size="lg"
+                  className="w-full"
+                  aria-label={t('buttons.contact')}
+                >
                   {t('buttons.contact')}
                 </Button>
               </Link>
@@ -39,7 +43,7 @@ export default function Hero() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="group"
+                  className="w-full group"
                   aria-label={t('buttons.projects')}
                 >
                   {t('buttons.projects')}
