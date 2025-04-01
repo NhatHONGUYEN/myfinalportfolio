@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Phone, Send } from 'lucide-react';
+import { Mail, Phone, Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -167,17 +167,22 @@ export default function Contact() {
                 )}
               />
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full transition-transform"
+                disabled={isSubmitting}
+                size="lg"
+              >
                 {isSubmitting ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                    <span>{t('form.submit')}...</span>
+                  <div className="flex items-center gap-x-2">
+                    <Loader2
+                      className="h-4 w-4 animate-spin"
+                      aria-hidden="true"
+                    />
+                    {t('form.submitting')}
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
-                    <Send className="h-4 w-4" />
-                    <span>{t('form.submit')}</span>
-                  </div>
+                  <>{t('form.submit')}</>
                 )}
               </Button>
             </form>

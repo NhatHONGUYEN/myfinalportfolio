@@ -5,6 +5,7 @@ import { projects } from '@/lib/data';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useTranslations, useLocale } from 'next-intl';
+import { ArrowRight } from 'lucide-react';
 
 export default function Projects() {
   const t = useTranslations('projects');
@@ -73,9 +74,17 @@ export default function Projects() {
             </article>
           ))}
         </div>
-        <Link href="/all-projects">
-          <Button size="lg">{t('viewMore')}</Button>
-        </Link>
+        <div className="flex justify-center w-full mt-8">
+          <Link href="/all-projects">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 shadow-lg hover:shadow-xl transform transition-all hover:scale-105"
+            >
+              <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
+              {t('viewMore')}
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );

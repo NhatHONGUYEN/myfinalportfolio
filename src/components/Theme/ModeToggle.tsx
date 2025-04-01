@@ -17,13 +17,20 @@ export function ModeToggle() {
 
   // Show nothing until mounted (avoids hydration mismatch)
   if (!mounted) {
-    return <Button variant="outline" size="icon" className="opacity-0" />;
+    return (
+      <Button
+        variant="outline"
+        size="icon"
+        className="opacity-0 transition-transform"
+      />
+    );
   }
 
   return (
     <Button
       variant="outline"
       size="icon"
+      className="transition-transform"
       onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
     >
       {resolvedTheme === 'light' ? (

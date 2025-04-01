@@ -3,6 +3,7 @@
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { ArrowUp } from 'lucide-react';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,12 @@ export default function ScrollToTopButton() {
 
   return (
     <div className="fixed bottom-4 right-4">
-      <Button onClick={scrollToTop} size="lg" className="group flex-col">
+      <Button
+        onClick={scrollToTop}
+        size="lg"
+        className="group transition-transform"
+      >
+        <ArrowUp className="mr-2 h-4 w-4" aria-hidden="true" />
         {t('scrollToTop')}
       </Button>
     </div>

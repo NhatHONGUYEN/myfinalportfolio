@@ -38,27 +38,33 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Globe className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">
-            {languageLabels[locale].changeLanguage}
-          </span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem asChild>
-          <Link href={getPathWithNewLocale('fr')} locale="fr">
-            {languageLabels[locale].french}
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href={getPathWithNewLocale('en')} locale="en">
-            {languageLabels[locale].english}
-          </Link>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="relative">
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="outline"
+            size="icon"
+            className="transition-transform"
+          >
+            <Globe className="h-[1.2rem] w-[1.2rem]" />
+            <span className="sr-only">
+              {languageLabels[locale].changeLanguage}
+            </span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem asChild>
+            <Link href={getPathWithNewLocale('fr')} locale="fr">
+              {languageLabels[locale].french}
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href={getPathWithNewLocale('en')} locale="en">
+              {languageLabels[locale].english}
+            </Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 }

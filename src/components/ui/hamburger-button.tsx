@@ -15,7 +15,8 @@ export function HamburgerButton({
 }: HamburgerButtonProps) {
   return (
     <Button
-      className={`relative flex size-8 text-muted-foreground ${className}`}
+      className={`relative flex size-8 text-muted-foreground transition-transform ${className}`}
+      size="lg"
       onClick={onClick}
     >
       <span className="sr-only">Open main menu</span>

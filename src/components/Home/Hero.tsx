@@ -1,4 +1,4 @@
-import { MoveRight } from 'lucide-react';
+import { Mail, GithubIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -27,16 +27,17 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row">
-            <div className="mt-4 flex flex-col w-full justify-center gap-2 sm:flex-row">
+            <div className="mt-4 flex flex-col w-full justify-center gap-8 sm:flex-row">
               <Link
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
                 target="_blank"
               >
                 <Button
                   size="lg"
-                  className="w-full"
+                  className="w-full transition-transform"
                   aria-label={t('buttons.contact')}
                 >
+                  <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t('buttons.contact')}
                 </Button>
               </Link>
@@ -44,14 +45,11 @@ export default function Hero() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="w-full group"
+                  className="w-full transition-transform"
                   aria-label={t('buttons.projects')}
                 >
+                  <GithubIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t('buttons.projects')}
-                  <MoveRight
-                    className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-                    strokeWidth={1}
-                  />
                 </Button>
               </Link>
             </div>

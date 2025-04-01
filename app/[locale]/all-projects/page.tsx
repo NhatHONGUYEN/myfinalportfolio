@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { MoveLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function AllProjects() {
@@ -79,13 +79,10 @@ export default function AllProjects() {
             <Button
               size="lg"
               variant="secondary"
-              className="group"
+              className="transition-transform py-6"
               aria-label={t('backToHome')}
             >
-              <MoveLeft
-                className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                strokeWidth={1}
-              />
+              <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
               {t('discoverProfile')}
             </Button>
           </Link>
