@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import ClientWrapper from '../../src/lib/ClientWrapper';
 import Footer from '@/components/Home/Footer';
+import { Toaster } from '@/components/ui/sonner';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -92,6 +93,7 @@ export default async function LocaleLayout({
               <ScrollToTopButton />
             </div>
           </ClientWrapper>
+          <Toaster position="top-right" />
         </ThemeProvider>
       </body>
     </html>

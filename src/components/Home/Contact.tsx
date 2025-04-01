@@ -4,8 +4,10 @@ import { Mail, Phone, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { contactFormSchema, ContactFormValues } from '@/lib/schema';
+import { createContactFormSchema, ContactFormValues } from '@/lib/schema';
 import { useState } from 'react';
+import { toast } from 'sonner';
+import { useLocale } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -14,21 +16,21 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export default function Contact() {
+  const locale = useLocale();
   const t = useTranslations('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState<
-    'success' | 'error' | null
-  >(null);
+  const [messageLength, setMessageLength] = useState(0);
+
+  // Utiliser le schéma de validation localisé
+  const contactSchema = createContactFormSchema(locale);
 
   const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       name: '',
       email: '',
@@ -38,7 +40,6 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    setSubmissionStatus(null);
 
     try {
       const response = await fetch('/api/send', {
@@ -50,51 +51,141 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        setSubmissionStatus('success');
+        toast.success(t('form.success'), {
+          duration: 5000,
+          position: 'top-right',
+        });
         form.reset();
+        setMessageLength(0);
       } else {
-        setSubmissionStatus('error');
+        toast.error(t('form.error'), {
+          duration: 5000,
+          position: 'top-right',
+        });
       }
     } catch {
-      setSubmissionStatus('error');
+      toast.error(t('form.error'), {
+        duration: 5000,
+        position: 'top-right',
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Fonction utilitaire pour traduire les messages d'erreur de validation
+  // Pas besoin de fonction de traduction, les messages d'erreur sont déjà complets
   const translateError = (error: { message?: string }) => {
-    if (!error.message) return '';
-
-    switch (error.message) {
-      case 'required':
-        return t('form.required');
-      case 'invalidEmail':
-        return t('form.invalidEmail');
-      case 'minLength':
-        return t('form.minLength').replace('{min}', '2');
-      case 'maxLength':
-        return t('form.maxLength').replace('{max}', '50');
-      default:
-        return error.message;
-    }
+    return error.message || '';
   };
 
   return (
     <section
+      className="w-full max-w-3xl mx-auto px-6 py-16  lg:px-8"
       id="contact"
-      className="w-full max-w-6xl mx-auto px-6 py-24 sm:py-32 lg:px-8"
     >
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="text-center ">
         <h2 className="font-semibold tracking-tight text-balance text-3xl lg:text-4xl">
           {t('title')}
         </h2>
         <p className="mt-2 text-muted-foreground">{t('subtitle')}</p>
       </div>
 
-      <div className="mx-auto mt-20 max-w-6xl grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+      <div className="mt-20 ">
+        {/* Contact Form */}
+        <div className="bg-background/50 max-w-lg mx-auto rounded-2xl shadow-sm border p-8 mb-16">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormLabel>{t('form.name')}</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder={t('form.namePlaceholder')}
+                        {...field}
+                      />
+                    </FormControl>
+                    {fieldState.error && (
+                      <p className="text-[0.8rem] font-medium text-destructive mt-2">
+                        {translateError(fieldState.error)}
+                      </p>
+                    )}
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormLabel>{t('form.email')}</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder={t('form.emailPlaceholder')}
+                        {...field}
+                      />
+                    </FormControl>
+                    {fieldState.error && (
+                      <p className="text-[0.8rem] font-medium text-destructive mt-2">
+                        {translateError(fieldState.error)}
+                      </p>
+                    )}
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormLabel>{t('form.message')}</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="min-h-32"
+                        placeholder={t('form.messagePlaceholder')}
+                        {...field}
+                        onChange={(e) => {
+                          field.onChange(e);
+                          setMessageLength(e.target.value.length);
+                        }}
+                      />
+                    </FormControl>
+                    <div className="flex justify-end text-xs text-muted-foreground mt-1">
+                      <span>{messageLength}/500</span>
+                    </div>
+                    {fieldState.error && (
+                      <p className="text-[0.8rem] font-medium text-destructive mt-2">
+                        {translateError(fieldState.error)}
+                      </p>
+                    )}
+                  </FormItem>
+                )}
+              />
+
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <div className="flex items-center gap-2">
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                    <span>{t('form.submit')}...</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <Send className="h-4 w-4" />
+                    <span>{t('form.submit')}</span>
+                  </div>
+                )}
+              </Button>
+            </form>
+          </Form>
+        </div>
+
         {/* Contact Info */}
-        <div className="space-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex gap-x-6 text-left">
             <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary">
               <Mail
@@ -138,97 +229,6 @@ export default function Contact() {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="bg-background/50 rounded-2xl shadow-sm border p-8">
-          {submissionStatus && (
-            <Alert
-              className={`mb-6 ${
-                submissionStatus === 'success'
-                  ? 'bg-green-50 text-green-800 dark:bg-green-950 dark:text-green-300'
-                  : 'bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-300'
-              }`}
-            >
-              <AlertDescription>
-                {submissionStatus === 'success'
-                  ? t('form.success')
-                  : t('form.error')}
-              </AlertDescription>
-            </Alert>
-          )}
-
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field, fieldState }) => (
-                  <FormItem>
-                    <FormLabel>{t('form.name')}</FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                    {fieldState.error && (
-                      <FormMessage>
-                        {translateError(fieldState.error)}
-                      </FormMessage>
-                    )}
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field, fieldState }) => (
-                  <FormItem>
-                    <FormLabel>{t('form.email')}</FormLabel>
-                    <FormControl>
-                      <Input type="email" {...field} />
-                    </FormControl>
-                    {fieldState.error && (
-                      <FormMessage>
-                        {translateError(fieldState.error)}
-                      </FormMessage>
-                    )}
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field, fieldState }) => (
-                  <FormItem>
-                    <FormLabel>{t('form.message')}</FormLabel>
-                    <FormControl>
-                      <Textarea className="min-h-32" {...field} />
-                    </FormControl>
-                    {fieldState.error && (
-                      <FormMessage>
-                        {translateError(fieldState.error)}
-                      </FormMessage>
-                    )}
-                  </FormItem>
-                )}
-              />
-
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                    <span>{t('form.submit')}...</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <Send className="h-4 w-4" />
-                    <span>{t('form.submit')}</span>
-                  </div>
-                )}
-              </Button>
-            </form>
-          </Form>
         </div>
       </div>
     </section>

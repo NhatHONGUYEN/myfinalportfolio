@@ -12,7 +12,7 @@ export default function AllProjects() {
   const locale = useLocale() as 'fr' | 'en';
 
   return (
-    <section className="py-32">
+    <section className="py-16 max-w-5xl mx-auto">
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">

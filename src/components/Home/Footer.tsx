@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer>
-      <div className="  py-12 md:flex mx-auto container   md:items-center md:justify-between">
+      <div className="  py-12 pt-32 md:flex mx-auto container   md:items-center md:justify-between">
         <div className="flex justify-center  gap-x-6 md:order-2">
           {navigation.map((item) => (
             <Link
