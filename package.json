@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email:dev": "npx tailwindcss -i ./app/emails/styles.css -o ./app/emails/output.css --watch",
+    "email:preview": "email dev -d ./app/emails",
+    "email:export": "npx ts-node --project tsconfig.json ./app/emails/preview.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",
@@ -17,6 +20,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-popover": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
+    "@react-email/components": "^0.0.34",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
@@ -27,6 +31,7 @@
     "next-themes": "^0.4.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^4.0.2",
     "react-hook-form": "^7.55.0",
     "react-icons": "^5.4.0",
     "resend": "^4.2.0",
@@ -41,7 +46,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }

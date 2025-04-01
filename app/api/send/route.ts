@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import ContactNotification from '../../emails/ContactNotification';
+import ThankYouEmail from '../../emails/ThankYouEmail';
 
 // Initialiser Resend avec la clé API
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -29,7 +31,7 @@ export async function POST(request: Request) {
       to: OWNER_EMAIL,
       subject: `Nouveau message de ${name}`,
       replyTo: email,
-      text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      react: ContactNotification({ name, email, message }),
     });
 
     // Maintenant que le domaine est vérifié, on peut envoyer l'email de confirmation
@@ -38,7 +40,7 @@ export async function POST(request: Request) {
       from: FROM_EMAIL,
       to: email,
       subject: 'Merci pour votre message',
-      text: `Bonjour ${name},\n\nMerci d'avoir pris contact avec moi. J'ai bien reçu votre message et je reviendrai vers vous dès que possible.\n\nCordialement,\nNhat-Quan HO NGUYEN`,
+      react: ThankYouEmail({ name }),
     });
 
     return NextResponse.json({ success: true });
