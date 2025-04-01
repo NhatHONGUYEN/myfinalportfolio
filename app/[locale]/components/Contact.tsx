@@ -1,6 +1,9 @@
 import { Mail, Phone } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Contact() {
+  const t = useTranslations('contact');
+
   return (
     <section
       id="contact"
@@ -8,13 +11,9 @@ export default function Contact() {
     >
       <div className="mx-auto  max-w-2xl sm:text-center">
         <h2 className=" font-semibold tracking-tight text-balance text-3xl  lg:text-4xl  ">
-          Contactez-moi
+          {t('title')}
         </h2>
-        <p className="mt-2 text-muted-foreground ">
-          Je recherche activement une alternance en développement web.
-          N&apos;hésitez pas à me contacter si vous avez des opportunités à me
-          proposer.
-        </p>
+        <p className="mt-2 text-muted-foreground ">{t('subtitle')}</p>
       </div>
       <div className="mx-auto mt-20 max-w-lg space-y-16">
         <div className="flex gap-x-6  text-left">
@@ -25,9 +24,9 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className=" font-semibold ">Email</h3>
+            <h3 className=" font-semibold ">{t('email.title')}</h3>
             <p className="mt-2  text-muted-foreground ">
-              Je serai ravi de recevoir vos propositions d&apos;alternance.
+              {t('email.description')}
             </p>
             <p className="mt-4 text-sm font-semibold">
               <a
@@ -49,10 +48,9 @@ export default function Contact() {
             />
           </div>
           <div>
-            <h3 className=" font-semibold ">Téléphone</h3>
+            <h3 className=" font-semibold ">{t('phone.title')}</h3>
             <p className="mt-2  text-muted-foreground ">
-              Je suis disponible pour échanger sur vos opportunités
-              d&apos;alternance.
+              {t('phone.description')}
             </p>
             <p className="mt-4 text-sm font-semibold">
               <span className="font-semibold hover:underline">

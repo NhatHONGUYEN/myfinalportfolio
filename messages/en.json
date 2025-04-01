@@ -13,6 +13,38 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "techStack": {
+    "title": "My Tech Stack",
+    "description": "Technologies and tools I master for modern web development"
+  },
+  "projects": {
+    "badge": "My Work",
+    "title": "Discover My Projects",
+    "description": "A selection of my web projects, demonstrating my skills in developing modern and high-performance applications.",
+    "viewMore": "More Projects"
+  },
+  "allProjects": {
+    "badge": "All Projects",
+    "title": "My Complete Portfolio",
+    "description": "A complete collection of my works, including web applications, design systems, and more.",
+    "backToHome": "Back to home",
+    "discoverProfile": "Discover my profile"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "I am actively looking for an apprenticeship in web development. Feel free to contact me if you have any opportunities to offer.",
+    "email": {
+      "title": "Email",
+      "description": "I would be delighted to receive your apprenticeship proposals."
+    },
+    "phone": {
+      "title": "Phone",
+      "description": "I am available to discuss your apprenticeship opportunities."
+    }
+  },
+  "ui": {
+    "scrollToTop": "Back to top"
+  },
   "metadata": {
     "title": "Nhat Portfolio",
     "description": "A simple portfolio website to showcase my projects and skills."

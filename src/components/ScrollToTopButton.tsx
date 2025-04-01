@@ -2,9 +2,11 @@
 
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const t = useTranslations('ui');
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -30,11 +32,10 @@ export default function ScrollToTopButton() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const label = 'Retour en haut';
   return (
     <div className="fixed bottom-4 right-4">
       <Button onClick={scrollToTop} size="lg" className="group flex-col">
-        {label}
+        {t('scrollToTop')}
       </Button>
     </div>
   );

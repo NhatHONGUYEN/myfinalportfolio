@@ -1,18 +1,20 @@
 import { IconsList } from '@/lib/data';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function IconGrid() {
+  const t = useTranslations('techStack');
+
   return (
     <section className="py-32 max-w-5xl mx-auto">
       <div className="container">
         {/* Heading Section */}
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
-            Ma Stack Technique
+            {t('title')}
           </h4>
           <p className="text-muted-foreground w-80 lg:w-auto lg:max-w-5xl">
-            Technologies et outils que je maîtrise pour le développement web
-            moderne
+            {t('description')}
           </p>
         </div>
 

@@ -13,6 +13,38 @@
     "projects": "Projets",
     "contact": "Contact"
   },
+  "techStack": {
+    "title": "Ma Stack Technique",
+    "description": "Technologies et outils que je maîtrise pour le développement web moderne"
+  },
+  "projects": {
+    "badge": "Mes Réalisations",
+    "title": "Découvrez Mes Projets",
+    "description": "Une sélection de mes projets web, démontrant mes compétences en développement d'applications modernes et performantes.",
+    "viewMore": "Plus de Projets"
+  },
+  "allProjects": {
+    "badge": "Tous les Projets",
+    "title": "Mon Portfolio Complet",
+    "description": "Une collection complète de mes réalisations, incluant des applications web, des systèmes de design, et bien plus encore.",
+    "backToHome": "Retour à l'accueil",
+    "discoverProfile": "Découvrir mon profil"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Je recherche activement une alternance en développement web. N'hésitez pas à me contacter si vous avez des opportunités à me proposer.",
+    "email": {
+      "title": "Email",
+      "description": "Je serai ravi de recevoir vos propositions d'alternance."
+    },
+    "phone": {
+      "title": "Téléphone",
+      "description": "Je suis disponible pour échanger sur vos opportunités d'alternance."
+    }
+  },
+  "ui": {
+    "scrollToTop": "Retour en haut"
+  },
   "metadata": {
     "title": "Nhat Portfolio",
     "description": "Un site portfolio simple pour présenter mes projets et compétences."

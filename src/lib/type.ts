@@ -6,10 +6,19 @@ export type IconsItem = {
 
 export type Project = {
   id: number;
-  date: string;
-  category: string;
+  date: {
+    fr: string;
+    en: string;
+  };
+  category: {
+    fr: string;
+    en: string;
+  };
   title: string;
-  description: string;
+  description: {
+    fr: string;
+    en: string;
+  };
   image: string;
   href: string;
 };

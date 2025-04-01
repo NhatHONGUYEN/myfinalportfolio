@@ -5,21 +5,24 @@ import { projects } from '@/lib/data';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { MoveLeft } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function AllProjects() {
+  const t = useTranslations('allProjects');
+  const locale = useLocale() as 'fr' | 'en';
+
   return (
     <section className="py-32">
       <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="text-center">
           <Badge variant="secondary" className="mb-6">
-            Tous les Projets
+            {t('badge')}
           </Badge>
           <h1 className="mb-3 text-pretty font-semibold md:mb-4 text-3xl lg:text-4xl">
-            Mon Portfolio Complet
+            {t('title')}
           </h1>
           <p className="mb-8 text-muted-foreground lg:max-w-2xl">
-            Une collection complète de mes réalisations, incluant des
-            applications web, des systèmes de design, et bien plus encore.
+            {t('description')}
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -50,13 +53,13 @@ export default function AllProjects() {
               <div className="max-w-xl h-full">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
                   <time
-                    dateTime={project.date}
+                    dateTime={project.date[locale]}
                     className="text-muted-foreground"
                   >
-                    {project.date}
+                    {project.date[locale]}
                   </time>
                   <div className="relative z-20 rounded-full bg-secondary px-3 py-1.5 font-medium text-primary hover:bg-secondary-foreground hover:text-secondary">
-                    {project.category}
+                    {project.category[locale]}
                   </div>
                 </div>
                 <div className="group relative text-left">
@@ -64,7 +67,7 @@ export default function AllProjects() {
                     {project.title}
                   </h3>
                   <p className="mt-5 text-sm/6 text-muted-foreground">
-                    {project.description}
+                    {project.description[locale]}
                   </p>
                 </div>
               </div>
@@ -77,13 +80,13 @@ export default function AllProjects() {
               size="lg"
               variant="secondary"
               className="group"
-              aria-label="Retour à l'accueil"
+              aria-label={t('backToHome')}
             >
               <MoveLeft
                 className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
                 strokeWidth={1}
               />
-              Découvrir mon profil
+              {t('discoverProfile')}
             </Button>
           </Link>
         </div>
