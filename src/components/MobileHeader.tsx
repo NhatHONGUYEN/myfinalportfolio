@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { ModeToggle } from '@/components/ModeToggle';
 import { HamburgerButton } from '@/components/ui/hamburger-button';
-import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './Theme/LanguageSwitcher';
+import { ModeToggle } from './Theme/ModeToggle';
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -25,9 +25,22 @@ type Props = {
   children: ReactNode;
 };
 
+// Mapping des fuseaux horaires par locale
+const timeZoneMapping = {
+  en: 'Europe/London',
+  fr: 'Europe/Paris',
+};
+
 export default function ClientWrapper({ messages, locale, children }: Props) {
+  const timeZone =
+    timeZoneMapping[locale as keyof typeof timeZoneMapping] || 'UTC';
+
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <NextIntlClientProvider
+      messages={messages}
+      locale={locale}
+      timeZone={timeZone}
+    >
       {children}
     </NextIntlClientProvider>
   );

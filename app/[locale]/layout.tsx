@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
 import './globals.css';
-import Footer from './components/Footer';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/Theme/theme-provider';
 import ParticlesBackGround from '@/components/ParticlesBackGround';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import ClientWrapper from './components/ClientWrapper';
+import ClientWrapper from '../../src/lib/ClientWrapper';
+import Footer from '@/components/Home/Footer';
 
 const workSans = Work_Sans({
   subsets: ['latin'],

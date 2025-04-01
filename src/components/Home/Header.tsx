@@ -6,11 +6,12 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
-import { ModeToggle } from '@/components/ModeToggle';
+import { ModeToggle } from '@/components/Theme/ModeToggle';
 import Link from 'next/link';
-import MobileHeader from './MobileHeader';
-import LanguageSwitcher from './LanguageSwitcher';
+
 import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '../Theme/LanguageSwitcher';
+import MobileHeader from '../MobileHeader';
 
 export default function Header() {
   const t = useTranslations('header');

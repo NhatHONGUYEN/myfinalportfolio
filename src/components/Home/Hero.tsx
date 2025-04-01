@@ -2,8 +2,9 @@ import { MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import ThemeAvatar from './ThemeAvatar';
+
 import { useTranslations } from 'next-intl';
+import ThemeAvatar from '../Theme/ThemeAvatar';
 
 export default function Hero() {
   const t = useTranslations('hero');

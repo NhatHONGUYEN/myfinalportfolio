@@ -1,9 +1,8 @@
-import Contact from './components/Contact';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import IconGrid from './components/IconGrid';
-
-import Projects from './components/Projects';
+import Contact from '@/components/Home/Contact';
+import Header from '@/components/Home/Header';
+import Hero from '@/components/Home/Hero';
+import IconGrid from '@/components/Home/IconGrid';
+import Projects from '@/components/Home/Projects';
 
 export default function Home() {
   return (

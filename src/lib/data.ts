@@ -2,7 +2,7 @@ import {
   GitHubIcon,
   InstagramIcon,
   TwitterIcon,
-} from '../../app/[locale]/components/SocialIcons';
+} from '../components/SocialIcons';
 import { IconsItem, NavigationItem, Project } from './type';
 
 export const navigation: NavigationItem[] = [
