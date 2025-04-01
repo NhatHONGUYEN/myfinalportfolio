@@ -5,15 +5,18 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { ModeToggle } from '@/components/ModeToggle';
 import { HamburgerButton } from '@/components/ui/hamburger-button';
-
-const navigationsLinks = [
-  { label: 'À propos', href: '#about' },
-  { label: 'Projets', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-];
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations('header');
+
+  const translatedLinks = [
+    { label: t('about'), href: '#about' },
+    { label: t('projects'), href: '#projects' },
+    { label: t('contact'), href: '#contact' },
+  ];
 
   return (
     <>
@@ -33,7 +36,7 @@ export default function MobileHeader() {
         )}
       >
         <nav className="flex flex-1 flex-col divide-y divide-border">
-          {navigationsLinks.map((link) => (
+          {translatedLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
@@ -45,8 +48,9 @@ export default function MobileHeader() {
               {link.label}
             </Link>
           ))}
-          <div className="divide-y divide-border py-4">
+          <div className="flex flex-col items-center gap-6 py-4 border-t border-border mt-4">
             <ModeToggle />
+            <LanguageSwitcher />
           </div>
         </nav>
       </div>
