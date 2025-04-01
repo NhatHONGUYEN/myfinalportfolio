@@ -9,15 +9,19 @@ import {
 import { ModeToggle } from '@/components/ModeToggle';
 import Link from 'next/link';
 import MobileHeader from './MobileHeader';
-
-// Mise à jour des liens
-const navigationsLinks = [
-  { label: 'À propos', href: '#about' },
-  { label: 'Projets', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-];
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
+  const t = useTranslations('header');
+
+  // Mise à jour des liens avec les traductions
+  const navigationsLinks = [
+    { label: t('about'), href: '#about' },
+    { label: t('projects'), href: '#projects' },
+    { label: t('contact'), href: '#contact' },
+  ];
+
   return (
     <section className="absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-full border bg-background/70 backdrop-blur-md">
       <div className="flex items-center justify-between px-6 py-3">
@@ -42,7 +46,8 @@ export default function Header() {
         </NavigationMenu>
         {/* Right side controls */}
         <div className="flex items-center gap-2.5">
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex items-center gap-2">
+            <LanguageSwitcher />
             <ModeToggle />
           </div>
           <MobileHeader />

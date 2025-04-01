@@ -8,6 +8,11 @@
       "projects": "Explorer mes projets"
     }
   },
+  "header": {
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
   "metadata": {
     "title": "Nhat Portfolio",
     "description": "Un site portfolio simple pour présenter mes projets et compétences."
