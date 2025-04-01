@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "email:dev": "npx tailwindcss -i ./app/emails/styles.css -o ./app/emails/output.css --watch",
-    "email:preview": "email dev -d ./app/emails",
-    "email:export": "npx ts-node --project tsconfig.json ./app/emails/preview.ts"
+    "email:preview": "email dev -d ./app/emails"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",
