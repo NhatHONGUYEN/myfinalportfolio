@@ -3,14 +3,25 @@ import { Resend } from 'resend';
 import ContactNotification from '../../emails/ContactNotification';
 import ThankYouEmail from '../../emails/ThankYouEmail';
 
+// Vérifier les variables d'environnement requises
+if (
+  !process.env.RESEND_API_KEY ||
+  !process.env.OWNER_EMAIL ||
+  !process.env.FROM_EMAIL
+) {
+  throw new Error(
+    "Variables d'environnement manquantes pour l'API d'envoi d'emails"
+  );
+}
+
 // Initialiser Resend avec la clé API
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Votre adresse email (pour le mode de test)
-const OWNER_EMAIL = 'hnnhat67@gmail.com';
+const OWNER_EMAIL = process.env.OWNER_EMAIL;
 
 // Adresse d'expéditeur vérifiée
-const FROM_EMAIL = 'contact@nhatnguyen.dev';
+const FROM_EMAIL = process.env.FROM_EMAIL;
 
 export async function POST(request: Request) {
   try {
@@ -27,8 +38,8 @@ export async function POST(request: Request) {
 
     // Envoyer l'email au propriétaire
     await resend.emails.send({
-      from: FROM_EMAIL,
-      to: OWNER_EMAIL,
+      from: FROM_EMAIL!,
+      to: OWNER_EMAIL!,
       subject: `Nouveau message de ${name}`,
       replyTo: email,
       react: ContactNotification({ name, email, message }),
@@ -37,7 +48,7 @@ export async function POST(request: Request) {
     // Maintenant que le domaine est vérifié, on peut envoyer l'email de confirmation
     // directement à l'utilisateur
     await resend.emails.send({
-      from: FROM_EMAIL,
+      from: FROM_EMAIL!,
       to: email,
       subject: 'Merci pour votre message',
       react: ThankYouEmail({ name }),
