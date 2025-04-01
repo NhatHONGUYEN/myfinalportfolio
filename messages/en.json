@@ -49,6 +49,7 @@
       "emailPlaceholder": "Enter your email address",
       "messagePlaceholder": "Write your message here...",
       "submit": "Send",
+      "submitting": "Sending...",
       "success": "Your message has been sent successfully. Thank you!",
       "error": "An error occurred. Please try again.",
       "required": "This field is required",
