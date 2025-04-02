@@ -82,9 +82,6 @@ export default function ThankYouEmail({
               <br />
               Nhat-Quan HO NGUYEN
             </Text>
-            <Text className="text-sm text-gray-500 mt-2">
-              Portfolio: nhatnguyen.dev
-            </Text>
           </Section>
         </Container>
       </Body>
