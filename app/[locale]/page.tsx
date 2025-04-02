@@ -1,4 +1,4 @@
-import Contact from '@/components/Home/Contact';
+import ContactSection from '@/components/Home/Contact/ContactSection';
 import Header from '@/components/Home/Header';
 import Hero from '@/components/Home/Hero';
 import IconGrid from '@/components/Home/IconGrid';
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <IconGrid />
       <Projects />
-      <Contact />
+      <ContactSection />
     </>
   );
 }
