@@ -78,7 +78,7 @@ export default function Projects() {
           <Link href="/all-projects">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 shadow-lg hover:shadow-xl transform transition-all hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-white dark:text-black px-8 py-6 shadow-lg hover:shadow-xl transform transition-all hover:scale-105"
             >
               <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
               {t('viewMore')}
