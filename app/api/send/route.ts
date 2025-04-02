@@ -26,7 +26,7 @@ const FROM_EMAIL = process.env.FROM_EMAIL;
 export async function POST(request: Request) {
   try {
     // Extraire les données du corps de la requête
-    const { name, email, message } = await request.json();
+    const { name, email, message, language = 'fr' } = await request.json();
 
     // Valider les données
     if (!name || !email || !message) {
@@ -36,13 +36,24 @@ export async function POST(request: Request) {
       );
     }
 
+    // Valider la langue si fournie
+    if (language && !['fr', 'en'].includes(language)) {
+      return NextResponse.json(
+        { error: 'Invalid language. Must be "fr" or "en"' },
+        { status: 400 }
+      );
+    }
+
     // Envoyer l'email au propriétaire
     await resend.emails.send({
       from: FROM_EMAIL!,
       to: OWNER_EMAIL!,
-      subject: `Nouveau message de ${name}`,
+      subject:
+        language === 'fr'
+          ? `Nouveau message de ${name}`
+          : `New message from ${name}`,
       replyTo: email,
-      react: ContactNotification({ name, email, message }),
+      react: ContactNotification({ name, email, message, language }),
     });
 
     // Maintenant que le domaine est vérifié, on peut envoyer l'email de confirmation
@@ -50,8 +61,11 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: FROM_EMAIL!,
       to: email,
-      subject: 'Merci pour votre message',
-      react: ThankYouEmail({ name }),
+      subject:
+        language === 'fr'
+          ? 'Merci pour votre message'
+          : 'Thank you for your message',
+      react: ThankYouEmail({ name, language }),
     });
 
     return NextResponse.json({ success: true });
