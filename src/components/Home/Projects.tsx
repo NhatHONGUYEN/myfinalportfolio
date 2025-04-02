@@ -75,7 +75,7 @@ export default function Projects() {
           ))}
         </div>
         <div className="flex justify-center w-full mt-8">
-          <Link href="/all-projects">
+          <Link href={`/${locale}/all-projects`}>
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white dark:text-black px-8 py-6 shadow-lg hover:shadow-xl transform transition-all hover:scale-105"

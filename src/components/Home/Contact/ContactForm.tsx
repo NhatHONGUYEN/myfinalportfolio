@@ -7,7 +7,7 @@ import { createContactFormSchema, ContactFormValues } from '@/lib/schema';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { toast } from 'sonner';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
@@ -120,7 +120,10 @@ export const ContactForm = () => {
                 {t('form.submitting')}
               </div>
             ) : (
-              <>{t('form.submit')}</>
+              <div className="flex items-center gap-x-2">
+                <Send className="h-4 w-4" aria-hidden="true" />
+                {t('form.submit')}
+              </div>
             )}
           </Button>
         </form>

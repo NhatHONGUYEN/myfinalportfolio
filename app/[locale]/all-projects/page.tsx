@@ -75,7 +75,7 @@ export default function AllProjects() {
           ))}
         </div>
         <div className="w-full flex justify-center">
-          <Link href="/">
+          <Link href={`/${locale}`}>
             <Button
               size="lg"
               variant="secondary"
