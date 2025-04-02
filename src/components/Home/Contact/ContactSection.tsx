@@ -35,7 +35,6 @@ export const ContactSection = () => {
             title={t('email.title')}
             description={t('email.description')}
             contactValue="hnnhat67@gmail.com"
-            link="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
           />
 
           <ContactInfo

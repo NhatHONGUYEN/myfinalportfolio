@@ -28,10 +28,7 @@ export default function Hero() {
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row">
             <div className="mt-4 flex flex-col w-full justify-center gap-8 sm:flex-row">
-              <Link
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=hnnhat67@gmail.com"
-                target="_blank"
-              >
+              <Link href="#contact">
                 <Button
                   size="lg"
                   className="w-full transition-transform"
