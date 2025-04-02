@@ -26,18 +26,19 @@ export default function ThankYouEmail({
           {(language === 'fr' || !language) && (
             <>
               <Heading className="text-xl font-bold text-blue-600">
-                🙏 Merci pour votre message
+                🙏 Un grand merci pour votre message !
               </Heading>
               <Section>
                 <Text>👋 Bonjour {name},</Text>
                 <Text>
-                  Je vous remercie d&apos;avoir pris contact avec moi via mon
-                  portfolio. Votre message a bien été reçu et j&apos;y
-                  accorderai toute mon attention.
+                  Je suis ravi(e) que vous ayez pris le temps de me contacter
+                  via mon portfolio. Votre message est important pour moi et je
+                  vais m&apos;assurer de lui accorder toute l&apos;attention
+                  qu&apos;il mérite.
                 </Text>
                 <Text>
-                  Je m&apos;efforcerai de vous répondre dans les meilleurs
-                  délais, généralement sous 24 à 48 heures ouvrables.
+                  Je m&apos;engage à vous répondre dans les plus brefs délais,
+                  généralement sous 24 à 48 heures ouvrables.
                 </Text>
               </Section>
             </>
@@ -51,16 +52,17 @@ export default function ThankYouEmail({
           {(language === 'en' || !language) && (
             <>
               <Heading className="text-xl font-bold text-blue-600">
-                🙏 Thank you for your message
+                🙏 A big thank you for your message!
               </Heading>
               <Section>
                 <Text>👋 Hello {name},</Text>
                 <Text>
-                  Thank you for contacting me through my portfolio. Your message
-                  has been received and I will give it my full attention.
+                  I&apos;m delighted that you took the time to reach out to me
+                  through my portfolio. Your message is important to me, and I
+                  will make sure to give it the attention it deserves.
                 </Text>
                 <Text>
-                  I will do my best to respond as soon as possible, typically
+                  I am committed to responding as soon as possible, typically
                   within 24 to 48 business hours.
                 </Text>
               </Section>
@@ -72,7 +74,11 @@ export default function ThankYouEmail({
           {/* Signature bilingue */}
           <Section>
             <Text>
-              ✨ {language === 'fr' ? 'Cordialement' : 'Sincerely'},
+              ✨{' '}
+              {language === 'fr'
+                ? 'Avec toute ma considération'
+                : 'With all my regards'}
+              ,
               <br />
               Nhat-Quan HO NGUYEN
             </Text>
