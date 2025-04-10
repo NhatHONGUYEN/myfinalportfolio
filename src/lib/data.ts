@@ -27,6 +27,25 @@ export const projects: Project[] = [
   {
     id: 1,
     date: {
+      fr: 'Avril, 2025',
+      en: 'April, 2025',
+    },
+    category: {
+      fr: 'Sport',
+      en: 'Sport',
+    },
+    title: 'CoachLeague',
+    description: {
+      fr: "Une plateforme d'abonnement pour salle de sport avec un tableau de bord intuitif. Les utilisateurs peuvent gérer leurs abonnements, suivre leurs progrès et interagir avec Coach Max, un bot intelligent qui offre des conseils personnalisés et des programmes d'entraînement adaptés.",
+      en: 'A gym membership platform with an intuitive dashboard. Users can manage their subscriptions, track their progress, and interact with Coach Max, an intelligent bot that provides personalized advice and tailored workout programs.',
+    },
+    image: '/images/projects/HeroCoach.jpg',
+    href: 'https://coach-sportif.vercel.app/',
+  },
+
+  {
+    id: 2,
+    date: {
       fr: 'Mars, 2025',
       en: 'March, 2025',
     },
@@ -44,7 +63,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     date: {
       fr: 'Mars, 2025',
       en: 'March, 2025',
@@ -64,7 +83,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     date: {
       fr: 'Février, 2025',
       en: 'February, 2025',
@@ -83,7 +102,7 @@ export const projects: Project[] = [
     href: 'https://anima-dusky.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     date: {
       fr: 'Février, 2025',
       en: 'February, 2025',
@@ -101,7 +120,7 @@ export const projects: Project[] = [
     href: 'https://nhathnblog.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     date: {
       fr: 'Janvier, 2025',
       en: 'January, 2025',
@@ -119,7 +138,7 @@ export const projects: Project[] = [
     href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     date: {
       fr: 'Janvier, 2025',
       en: 'January, 2025',
@@ -137,7 +156,7 @@ export const projects: Project[] = [
     href: 'https://meals-finder-lake.vercel.app/',
   },
   {
-    id: 7,
+    id: 8,
     date: {
       fr: 'Décembre, 2024',
       en: 'December, 2024',
@@ -155,7 +174,7 @@ export const projects: Project[] = [
     href: 'https://coffee-shop-five-jet.vercel.app/',
   },
   {
-    id: 8,
+    id: 9,
     date: {
       fr: 'Juillet, 2024',
       en: 'July, 2024',
@@ -173,7 +192,7 @@ export const projects: Project[] = [
     href: 'https://wakaranai-alpha.vercel.app/',
   },
   {
-    id: 9,
+    id: 10,
     date: {
       fr: 'Juillet, 2024',
       en: 'July, 2024',
@@ -191,7 +210,7 @@ export const projects: Project[] = [
     href: 'https://portfolio-v2-mu-neon.vercel.app/',
   },
   {
-    id: 10,
+    id: 11,
     date: {
       fr: 'Juin, 2024',
       en: 'June, 2024',
@@ -209,7 +228,7 @@ export const projects: Project[] = [
     href: 'https://barameyv3.vercel.app/',
   },
   {
-    id: 11,
+    id: 12,
     date: {
       fr: 'Avril, 2024',
       en: 'April, 2024',
@@ -227,7 +246,7 @@ export const projects: Project[] = [
     href: 'https://sushi-sensation.vercel.app/',
   },
   {
-    id: 12,
+    id: 13,
     date: {
       fr: 'Avril, 2024',
       en: 'April, 2024',
