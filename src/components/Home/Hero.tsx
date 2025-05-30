@@ -1,4 +1,4 @@
-import { Mail, GithubIcon } from 'lucide-react';
+import { Mail, GithubIcon, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -27,7 +27,7 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-6 lg:flex-row">
-            <div className="mt-4 flex flex-col w-full justify-center gap-8 sm:flex-row">
+            <div className="mt-4 flex flex-col w-full justify-center gap-8 sm:flex-row flex-wrap">
               <Link href="#contact">
                 <Button
                   size="lg"
@@ -47,6 +47,21 @@ export default function Hero() {
                 >
                   <GithubIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                   {t('buttons.projects')}
+                </Button>
+              </Link>
+              <Link
+                href="/CV_Nhat_Quan_HO_NGUYEN_Alternance_Dev_2025.pdf"
+                target="_blank"
+                download
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full transition-transform"
+                  aria-label={t('buttons.resume')}
+                >
+                  <FileDown className="mr-2 h-4 w-4" aria-hidden="true" />
+                  {t('buttons.resume')}
                 </Button>
               </Link>
             </div>

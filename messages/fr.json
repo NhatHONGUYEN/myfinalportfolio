@@ -5,7 +5,8 @@
     "description": "Développeur Angular & Java, je conçois des applications web scalables et orientées utilisateur, rigoureusement testées et optimisées. Disponible en alternance dès décembre 2024 pour rejoindre une ESN et participer à des projets ambitieux.",
     "buttons": {
       "contact": "Me contacter par mail",
-      "projects": "Explorer mes projets"
+      "projects": "Explorer mes projets",
+      "resume": "Télécharger mon CV"
     }
   },
   "header": {
