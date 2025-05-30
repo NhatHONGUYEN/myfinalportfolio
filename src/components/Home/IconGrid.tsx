@@ -13,7 +13,7 @@ export default function IconGrid() {
           <h4 className="text-pretty font-semibold text-3xl lg:text-4xl">
             {t('title')}
           </h4>
-          <p className="text-muted-foreground w-80 lg:w-auto lg:max-w-5xl">
+          <p className="text-muted-foreground w-80 lg:w-auto lg:max-w-2xl">
             {t('description')}
           </p>
         </div>
