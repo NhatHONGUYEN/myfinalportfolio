@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Nhat-Quan HO NGUYEN",
     "title": "Développeur Full-Stack",
-    "description": "Développeur Full-Stack spécialisé en React, Next.js et Node.js. Je crée des applications web modernes et performantes, et je recherche actuellement une alternance pour développer mes compétences.",
+    "description": "Développeur Angular & Java, je conçois des applications web scalables et orientées utilisateur, rigoureusement testées et optimisées. Disponible en alternance dès décembre 2024 pour rejoindre une ESN et participer à des projets ambitieux.",
     "buttons": {
       "contact": "Me contacter par mail",
       "projects": "Explorer mes projets"
@@ -12,6 +12,15 @@
     "about": "À propos",
     "projects": "Projets",
     "contact": "Contact"
+  },
+  "about": {
+    "badge": "Mon Parcours",
+    "title": "À Propos de Moi",
+    "paragraphs": {
+      "first": "Passionné par la création et la résolution de défis techniques, j'ai d'abord exercé comme intermittent du spectacle de 2011 à 2020, une période qui m'a appris la rigueur, l'adaptabilité et la gestion de projets au quotidien. J'ai ensuite travaillé comme vendeur chez Lacoste jusqu'en 2024, où j'ai renforcé mon sens du service client et mes compétences en communication.",
+      "second": "Je terminerai mon bootcamp intensif à La Capsule en décembre 2024, et depuis début 2025 je me suis lancé le défi de réaliser un projet web par semaine. Chaque mini-MVP m'a permis d'explorer de nouvelles fonctionnalités, de repousser mes limites techniques et d'affiner ma vision globale de ce qu'est un site performant. En parallèle, je poursuis ma formation en autodidacte — après React et Next.js, j'ai commencé Angular et Java début mai 2025 pour élargir mes compétences.",
+      "third": "Je suis aujourd'hui à la recherche d'une alternance au sein d'une ESN pour évoluer dans un véritable environnement d'équipe, profiter d'un « step up » formateur et, à terme, partager mon expérience à mon tour (philosophie « each one teach one »). En dehors du code, je suis un gamer assidu : ces temps-ci, c'est Valorant qui occupe mes soirées !"
+    }
   },
   "techStack": {
     "title": "Ma Stack Technique",

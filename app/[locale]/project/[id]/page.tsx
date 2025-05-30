@@ -24,7 +24,7 @@ export default function ProjectPage() {
 
   return (
     <section className="py-16 max-w-5xl mx-auto">
-      <div className="container px-4 md:px-6">
+      <div className="container w-80 md:w-auto mx-auto flex flex-col items-center gap-16 lg:px-16">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col items-start gap-4">
             <ButtonLink
