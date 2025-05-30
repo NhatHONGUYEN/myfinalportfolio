@@ -21,12 +21,12 @@
     "badge": "My Work",
     "title": "Discover My Projects",
     "description": "A selection of my web projects, demonstrating my skills in developing modern and high-performance applications.",
-    "viewMore": "More Projects"
+    "viewMore": "See my latest project"
   },
   "allProjects": {
     "badge": "All Projects",
     "title": "My Complete Portfolio",
-    "description": "A complete collection of my works, including web applications, design systems, and more.",
+    "description": "A comprehensive collection of my work, including web applications, design systems, and more.",
     "backToHome": "Back to home",
     "discoverProfile": "Back to home"
   },
@@ -64,5 +64,10 @@
   "metadata": {
     "title": "Nhat Portfolio",
     "description": "A simple portfolio website to showcase my projects and skills."
+  },
+  "project": {
+    "backToProjects": "Back to projects",
+    "visitWebsite": "Visit website",
+    "publishedIn": "Published in"
   }
 }

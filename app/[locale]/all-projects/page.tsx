@@ -1,11 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import { ButtonLink } from '@/components/ui/button-link';
 
 export default function AllProjects() {
   const t = useTranslations('allProjects');
@@ -49,6 +51,15 @@ export default function AllProjects() {
                   priority
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/10 ring-inset" />
+                <div className="absolute bottom-4 right-4">
+                  <Link
+                    href={`/${locale}/project/${project.id}`}
+                    className="relative z-20 inline-flex items-center justify-center rounded-full bg-secondary px-3 py-1.5 font-medium text-primary hover:bg-secondary-foreground hover:text-secondary transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {locale === 'fr' ? 'Voir détails' : 'View details'}
+                  </Link>
+                </div>
               </div>
               <div className="max-w-xl h-full">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
@@ -75,17 +86,16 @@ export default function AllProjects() {
           ))}
         </div>
         <div className="w-full flex justify-center">
-          <Link href={`/${locale}`}>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="transition-transform py-6"
-              aria-label={t('backToHome')}
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
-              {t('discoverProfile')}
-            </Button>
-          </Link>
+          <ButtonLink
+            href={`/${locale}`}
+            size="lg"
+            variant="secondary"
+            className="transition-transform py-6"
+            aria-label={t('backToHome')}
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" aria-hidden="true" />
+            {t('discoverProfile')}
+          </ButtonLink>
         </div>
       </div>
     </section>

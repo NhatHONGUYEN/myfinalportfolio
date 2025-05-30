@@ -3,9 +3,9 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { projects } from '@/lib/data';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { useTranslations, useLocale } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { ButtonLink } from '@/components/ui/button-link';
 
 export default function Projects() {
   const t = useTranslations('projects');
@@ -32,9 +32,7 @@ export default function Projects() {
               className="flex flex-col items-start justify-between relative group"
             >
               <Link
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/${locale}/project/${project.id}`}
                 className="absolute inset-0 z-10"
               >
                 <span className="sr-only">{project.title}</span>
@@ -75,15 +73,10 @@ export default function Projects() {
           ))}
         </div>
         <div className="flex justify-center w-full mt-8">
-          <Link href={`/${locale}/all-projects`}>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white dark:text-black px-8 py-6 shadow-lg hover:shadow-xl transform transition-all hover:scale-105"
-            >
-              <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
-              {t('viewMore')}
-            </Button>
-          </Link>
+          <ButtonLink href={`/${locale}/all-projects`} size="lg">
+            <ArrowRight className="mr-2 h-5 w-5" aria-hidden="true" />
+            {t('viewMore')}
+          </ButtonLink>
         </div>
       </div>
     </section>

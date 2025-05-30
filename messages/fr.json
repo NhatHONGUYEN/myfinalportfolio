@@ -21,7 +21,7 @@
     "badge": "Mes Réalisations",
     "title": "Découvrez Mes Projets",
     "description": "Une sélection de mes projets web, démontrant mes compétences en développement d'applications modernes et performantes.",
-    "viewMore": "Plus de Projets"
+    "viewMore": "Voir mon dernier projet"
   },
   "allProjects": {
     "badge": "Tous les Projets",
@@ -29,6 +29,11 @@
     "description": "Une collection complète de mes réalisations, incluant des applications web, des systèmes de design, et bien plus encore.",
     "backToHome": "Retour à l'accueil",
     "discoverProfile": "Retour à l'accueil"
+  },
+  "project": {
+    "backToProjects": "Retour aux projets",
+    "visitWebsite": "Visiter le site",
+    "publishedIn": "Publié en"
   },
   "contact": {
     "title": "Contactez-moi",
