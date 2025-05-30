@@ -34,9 +34,7 @@ export default function AllProjects() {
               className="flex flex-col items-start justify-between relative group"
             >
               <Link
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/${locale}/project/${project.id}`}
                 className="absolute inset-0 z-10"
               >
                 <span className="sr-only">{project.title}</span>
@@ -51,15 +49,6 @@ export default function AllProjects() {
                   priority
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/10 ring-inset" />
-                <div className="absolute bottom-4 right-4">
-                  <Link
-                    href={`/${locale}/project/${project.id}`}
-                    className="relative z-20 inline-flex items-center justify-center rounded-full bg-secondary px-3 py-1.5 font-medium text-primary hover:bg-secondary-foreground hover:text-secondary transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {locale === 'fr' ? 'Voir détails' : 'View details'}
-                  </Link>
-                </div>
               </div>
               <div className="max-w-xl h-full">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">

@@ -6,25 +6,18 @@ import Image from 'next/image';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { ButtonLink } from '@/components/ui/button-link';
 
-type ProjectPageProps = {
-  params: {
-    id: string;
-    locale: string;
-  };
-};
-
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const projectId = parseInt(params.id);
-  const t = useTranslations('project');
+export default function ProjectPage() {
+  const params = useParams();
+  const projectId = parseInt(params.id as string);
   const locale = params.locale as 'fr' | 'en';
 
-  // Trouver le projet avec l'ID correspondant
+  const t = useTranslations('project');
+
   const project = projects.find((p) => p.id === projectId);
 
-  // Si le projet n'existe pas, afficher une page 404
   if (!project) {
     notFound();
   }
