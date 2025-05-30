@@ -39,7 +39,7 @@ export const projects: Project[] = [
       fr: "Une To-Do List personnelle conçue pour m'accompagner dans l'apprentissage de Java, Spring Boot et Angular. Ce projet m'a permis d'apprendre à utiliser ces technologies, d'organiser mes tâches d'étude et de suivre ma progression au fil des étapes.",
       en: 'A personal To-Do List designed to guide my learning of Java, Spring Boot and Angular. This project enabled me to learn how to use these technologies, organize my study tasks, and track my progress through each phase.',
     },
-    image: '/images/projects/TodoBase.png',
+    image: '/images/projects/ToDoBase.png',
     href: 'https://todoappnhat.netlify.app',
   },
   {
