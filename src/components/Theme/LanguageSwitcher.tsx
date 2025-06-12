@@ -53,12 +53,12 @@ export default function LanguageSwitcher() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="cursor-pointer" align="end">
-          <DropdownMenuItem asChild>
+          <DropdownMenuItem className="cursor-pointer" asChild>
             <Link href={getPathWithNewLocale('fr')} locale="fr">
               {languageLabels[locale].french}
             </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem asChild>
+          <DropdownMenuItem className="cursor-pointer" asChild>
             <Link href={getPathWithNewLocale('en')} locale="en">
               {languageLabels[locale].english}
             </Link>
