@@ -49,11 +49,7 @@ export default function Hero() {
                   {t('buttons.projects')}
                 </Button>
               </Link>
-              <Link
-                href="/CV_Nhat_Quan_HO_NGUYEN_Alternance_Dev_2025.pdf"
-                target="_blank"
-                download
-              >
+              <Link href="/CV Nhat Quan HO NGUYEN.pdf" target="_blank" download>
                 <Button
                   size="lg"
                   variant="outline"
