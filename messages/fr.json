@@ -48,7 +48,14 @@
     "gallery": "Aperçu du projet",
     "video": "Démonstration vidéo",
     "learnings": "Ce que j'ai appris",
-    "motivation": "Pourquoi ce projet ?"
+    "motivation": "Pourquoi ce projet ?",
+    "challenges": "Défis rencontrés",
+    "viewCode": "Voir le code",
+    "repositories": "Repositories",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "config": "Configuration",
+    "mobile": "Mobile"
   },
   "contact": {
     "title": "Contactez-moi",

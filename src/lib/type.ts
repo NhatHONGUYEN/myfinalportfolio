@@ -32,6 +32,19 @@ export type Project = {
     fr: string;
     en: string;
   };
+  challenges?: {
+    fr: string;
+    en: string;
+  };
+  github?:
+    | string
+    | {
+        frontend?: string;
+        backend?: string;
+        config?: string;
+        mobile?: string;
+        [key: string]: string | undefined;
+      };
 };
 
 export type NavigationItem = {

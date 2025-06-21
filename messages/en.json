@@ -83,6 +83,13 @@
     "gallery": "Project preview",
     "video": "Video demonstration",
     "learnings": "What I learned",
-    "motivation": "Why this project?"
+    "motivation": "Why this project?",
+    "challenges": "Challenges faced",
+    "viewCode": "View code",
+    "repositories": "Repositories",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "config": "Configuration",
+    "mobile": "Mobile"
   }
 }

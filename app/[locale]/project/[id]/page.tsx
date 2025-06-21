@@ -3,7 +3,7 @@
 import React from 'react';
 import { projects } from '@/lib/data';
 import Image from 'next/image';
-import { ArrowLeft, ExternalLink, Code, Lightbulb, Target } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
 import { notFound, useParams } from 'next/navigation';
@@ -94,14 +94,13 @@ export default function ProjectPage() {
 
           {/* Section Technologies */}
           {project.technologies && (
-            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <Code className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">{t('technologies')}</h2>
-              </div>
+            <div className="mt-12">
+              <h2 className="mb-6 text-2xl font-semibold">
+                {t('technologies')}
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
-                  <Badge key={index} variant="outline" className="text-sm">
+                  <Badge key={index} variant="secondary" className="text-sm">
                     {tech}
                   </Badge>
                 ))}
@@ -109,29 +108,39 @@ export default function ProjectPage() {
             </div>
           )}
 
-          {/* Section Apprentissages */}
-          {project.learnings && (
-            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <Lightbulb className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">{t('learnings')}</h2>
+          {/* Section Motivation */}
+          {project.motivation && (
+            <div className="mt-12">
+              <h2 className="mb-6 text-2xl font-semibold">{t('motivation')}</h2>
+              <div className="prose dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.motivation[locale]}
+                </p>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {project.learnings[locale]}
-              </p>
             </div>
           )}
 
-          {/* Section Motivation */}
-          {project.motivation && (
-            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <Target className="h-5 w-5 text-primary" />
-                <h2 className="text-xl font-semibold">{t('motivation')}</h2>
+          {/* Section Apprentissages */}
+          {project.learnings && (
+            <div className="mt-12">
+              <h2 className="mb-6 text-2xl font-semibold">{t('learnings')}</h2>
+              <div className="prose dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.learnings[locale]}
+                </p>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {project.motivation[locale]}
-              </p>
+            </div>
+          )}
+
+          {/* Section Défis rencontrés */}
+          {project.challenges && (
+            <div className="mt-12">
+              <h2 className="mb-6 text-2xl font-semibold">{t('challenges')}</h2>
+              <div className="prose dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.challenges[locale]}
+                </p>
+              </div>
             </div>
           )}
 
@@ -169,7 +178,7 @@ export default function ProjectPage() {
             </div>
           )}
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col gap-4">
             <ButtonLink
               href={project.href}
               target="_blank"
@@ -180,6 +189,63 @@ export default function ProjectPage() {
               <ExternalLink className="h-4 w-4" />
               {t('visitWebsite')}
             </ButtonLink>
+
+            {project.github && (
+              <div className="flex flex-col gap-3">
+                {typeof project.github === 'string' ? (
+                  <ButtonLink
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="lg"
+                    variant="outline"
+                    className="gap-2"
+                  >
+                    <Github className="h-4 w-4" />
+                    {t('viewCode')}
+                  </ButtonLink>
+                ) : (
+                  <>
+                    <h3 className="text-lg font-semibold">
+                      {t('repositories')}
+                    </h3>
+                    <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+                      {Object.entries(project.github).map(([key, url]) => {
+                        if (!url) return null;
+                        const label = [
+                          'frontend',
+                          'backend',
+                          'config',
+                          'mobile',
+                        ].includes(key)
+                          ? t(
+                              key as
+                                | 'frontend'
+                                | 'backend'
+                                | 'config'
+                                | 'mobile'
+                            )
+                          : key.charAt(0).toUpperCase() + key.slice(1);
+                        return (
+                          <ButtonLink
+                            key={key}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            size="sm"
+                            variant="outline"
+                            className="gap-2"
+                          >
+                            <Github className="h-4 w-4" />
+                            {label}
+                          </ButtonLink>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

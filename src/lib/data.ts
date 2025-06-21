@@ -48,14 +48,19 @@ export const projects: Project[] = [
       'TypeScript',
       'PostgreSQL',
       'Docker',
+      'Keycloak',
     ],
     learnings: {
-      fr: "Ce projet m'a permis de découvrir l'écosystème Java et Spring Boot. J'ai appris à créer des APIs REST robustes, à gérer l'authentification JWT, et à structurer une application Angular avec des services et des guards. La gestion des états avec Angular et l'intégration avec une base de données PostgreSQL ont été des défis enrichissants.",
-      en: 'This project allowed me to discover the Java and Spring Boot ecosystem. I learned to create robust REST APIs, manage JWT authentication, and structure an Angular application with services and guards. State management with Angular and integration with a PostgreSQL database were enriching challenges.',
+      fr: "Ce projet m'a permis de découvrir l'écosystème Java et Spring Boot en profondeur. J'ai appris à créer des APIs REST robustes avec le principe des DTOs pour le transfert de données, l'utilisation de Mappers pour la conversion entre entités et DTOs, et la gestion centralisée des erreurs avec les Exception Handlers. Un apprentissage majeur a été la configuration de Keycloak pour la gestion avancée de l'authentification et des autorisations. Côté Angular, j'ai maîtrisé les services, les guards, les Reactive Forms et Angular Material pour l'interface utilisateur. L'écriture en POO (Programmation Orientée Objet) a été un apprentissage fondamental. J'ai également appris le déploiement sur Railway - le site est temporairement inaccessible pour des raisons budgétaires mais sera remis en ligne le mois prochain.",
+      en: 'This project allowed me to deeply discover the Java and Spring Boot ecosystem. I learned to create robust REST APIs with the DTO principle for data transfer, using Mappers for conversion between entities and DTOs, and centralized error handling with Exception Handlers. A major learning was configuring Keycloak for advanced authentication and authorization management. On the Angular side, I mastered services, guards, Reactive Forms and Angular Material for the user interface. Object-Oriented Programming (OOP) was a fundamental learning experience. I also learned deployment on Railway - the site is temporarily inaccessible for budget reasons but will be back online next month.',
     },
     motivation: {
       fr: "Voulant élargir mes compétences au-delà de React/Next.js, j'ai choisi de me lancer dans Java et Angular pour diversifier mon profil technique. Une todo-list était le projet parfait pour apprendre les bases : CRUD, authentification, et architecture MVC. C'était aussi un moyen d'organiser concrètement mon apprentissage !",
       en: 'Wanting to expand my skills beyond React/Next.js, I chose to dive into Java and Angular to diversify my technical profile. A todo-list was the perfect project to learn the basics: CRUD, authentication, and MVC architecture. It was also a way to concretely organize my learning!',
+    },
+    challenges: {
+      fr: "Le plus grand défi a été de maîtriser l'écosystème Java après avoir travaillé principalement avec JavaScript. La configuration de Keycloak et l'intégration avec Spring Boot ont nécessité beaucoup de recherches et de tests. Les erreurs de CORS entre Angular et Spring Boot m'ont fait perdre du temps, ainsi que la gestion des DTOs et des relations entre entités JPA. Le déploiement sur Railway avec Docker a aussi été complexe, notamment pour la configuration des variables d'environnement et la connexion à PostgreSQL.",
+      en: 'The biggest challenge was mastering the Java ecosystem after working mainly with JavaScript. Configuring Keycloak and integrating it with Spring Boot required a lot of research and testing. CORS errors between Angular and Spring Boot cost me time, as well as managing DTOs and JPA entity relationships. Deployment on Railway with Docker was also complex, especially for environment variable configuration and PostgreSQL connection.',
     },
     gallery: [
       '/images/projects/ToDoBase.png',
@@ -63,6 +68,11 @@ export const projects: Project[] = [
       '/images/projects/ToDoBase2.png',
     ],
     video: '/videos/ToDoBaseVideo.mp4',
+    github: {
+      frontend: 'https://github.com/NhatHONGUYEN/ToDoAppFrontEnd',
+      backend: 'https://github.com/NhatHONGUYEN/TodoAppBackEnd',
+      config: 'https://github.com/NhatHONGUYEN/ToDoAppKeycloak',
+    },
   },
   {
     id: 2,
@@ -98,6 +108,11 @@ export const projects: Project[] = [
       fr: "Passionné de sport, je voulais créer une plateforme qui combine technologie et fitness. L'idée d'un coach virtuel intelligent qui s'adapte aux besoins de chaque utilisateur m'a motivé à explorer l'IA conversationnelle et les systèmes d'abonnement.",
       en: "Passionate about sports, I wanted to create a platform that combines technology and fitness. The idea of an intelligent virtual coach that adapts to each user's needs motivated me to explore conversational AI and subscription systems.",
     },
+    challenges: {
+      fr: "L'intégration de l'API OpenAI a été complexe, notamment pour gérer les coûts et optimiser les prompts pour obtenir des conseils sportifs pertinents. La gestion des webhooks Stripe pour les abonnements récurrents m'a posé des difficultés, surtout pour gérer les échecs de paiement et les annulations. L'optimisation des performances avec Prisma pour les requêtes complexes (utilisateurs + abonnements + historique) a nécessité plusieurs refactorisations.",
+      en: 'Integrating the OpenAI API was complex, especially managing costs and optimizing prompts to get relevant sports advice. Managing Stripe webhooks for recurring subscriptions was challenging, especially handling payment failures and cancellations. Performance optimization with Prisma for complex queries (users + subscriptions + history) required several refactorings.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/coach-sportif',
   },
 
   {
@@ -134,6 +149,11 @@ export const projects: Project[] = [
       fr: "Ayant vécu des difficultés pour prendre rendez-vous médicaux, je voulais créer une solution qui simplifie cette démarche. L'objectif était de créer un pont numérique entre patients et professionnels de santé, tout en respectant la confidentialité des données.",
       en: 'Having experienced difficulties making medical appointments, I wanted to create a solution that simplifies this process. The goal was to create a digital bridge between patients and healthcare professionals, while respecting data confidentiality.',
     },
+    challenges: {
+      fr: "La sécurité des données médicales a été le défi majeur, nécessitant une compréhension approfondie du RGPD et des bonnes pratiques de chiffrement. L'intégration de Twilio pour les SMS de rappel a posé des problèmes de fiabilité et de gestion des fuseaux horaires. La conception d'une interface accessible pour tous les âges (patients âgés) tout en restant moderne a demandé plusieurs itérations UX/UI.",
+      en: 'Medical data security was the major challenge, requiring deep understanding of GDPR and encryption best practices. Twilio integration for SMS reminders posed reliability issues and timezone management problems. Designing an accessible interface for all ages (elderly patients) while staying modern required several UX/UI iterations.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/doc-board',
   },
 
   {
@@ -170,6 +190,11 @@ export const projects: Project[] = [
       fr: "Passionné par la culture coréenne et l'apprentissage des langues, je voulais créer une expérience d'apprentissage différente, plus ludique et moins intimidante. Pochacco apporte cette dimension kawaii qui rend l'apprentissage du coréen plus accessible et amusant.",
       en: 'Passionate about Korean culture and language learning, I wanted to create a different learning experience, more playful and less intimidating. Pochacco brings this kawaii dimension that makes learning Korean more accessible and fun.',
     },
+    challenges: {
+      fr: "La création d'un système de gamification équilibré a été complexe : il fallait motiver sans frustrer. Les animations avec Framer Motion ont causé des problèmes de performance sur mobile, nécessitant une optimisation poussée. La gestion des caractères coréens (Hangul) dans les formulaires et la validation des réponses ont demandé une recherche approfondie sur l'encodage UTF-8 et les spécificités linguistiques.",
+      en: 'Creating a balanced gamification system was complex: it needed to motivate without frustrating. Framer Motion animations caused performance issues on mobile, requiring extensive optimization. Managing Korean characters (Hangul) in forms and answer validation required deep research on UTF-8 encoding and linguistic specificities.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/Mocou',
   },
 
   {
@@ -206,6 +231,11 @@ export const projects: Project[] = [
       fr: "Grand fan d'anime, je voulais créer une plateforme qui centralise toutes les informations sur mes séries préférées. L'objectif était de proposer une alternative moderne et élégante aux sites existants, avec une UX soignée et des données riches.",
       en: 'As a big anime fan, I wanted to create a platform that centralizes all information about my favorite series. The goal was to offer a modern and elegant alternative to existing sites, with polished UX and rich data.',
     },
+    challenges: {
+      fr: "L'API Jikan (MyAnimeList) a des limitations de rate limiting très strictes (1 requête/seconde), ce qui a compliqué la récupération de données en masse. La gestion du cache avec React Query était essentielle mais complexe à configurer correctement. Les images d'anime de différentes sources avaient des formats et qualités variables, nécessitant un système de fallback et d'optimisation d'images robuste.",
+      en: 'The Jikan API (MyAnimeList) has very strict rate limiting (1 request/second), which complicated bulk data retrieval. Cache management with React Query was essential but complex to configure correctly. Anime images from different sources had variable formats and qualities, requiring a robust fallback and image optimization system.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/Anima',
   },
   {
     id: 6,
@@ -240,6 +270,11 @@ export const projects: Project[] = [
       fr: "Voulant documenter mon parcours de reconversion, j'ai créé ce blog pour partager mes apprentissages et aider d'autres personnes dans la même situation. C'est devenu mon espace de réflexion et de partage avec la communauté dev.",
       en: 'Wanting to document my career transition journey, I created this blog to share my learnings and help others in the same situation. It became my space for reflection and sharing with the dev community.',
     },
+    challenges: {
+      fr: "La configuration de Contentlayer avec Next.js 13+ et le nouveau App Router a été laborieuse, avec peu de documentation disponible à l'époque. L'optimisation SEO pour un blog statique nécessitait une compréhension fine des métadonnées et du sitemap. La création d'un système de tags et de catégories dynamique tout en gardant les performances optimales a demandé plusieurs refactorisations.",
+      en: 'Configuring Contentlayer with Next.js 13+ and the new App Router was laborious, with little documentation available at the time. SEO optimization for a static blog required fine understanding of metadata and sitemap. Creating a dynamic tag and category system while maintaining optimal performance required several refactorings.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/mdxblog',
   },
   {
     id: 7,
@@ -273,6 +308,11 @@ export const projects: Project[] = [
       fr: "Passionné de cuisine italienne, je voulais créer un site qui transmette l'authenticité et la passion d'un vrai restaurant italien. L'objectif était de faire saliver les visiteurs et de leur donner envie de réserver une table !",
       en: 'Passionate about Italian cuisine, I wanted to create a site that conveys the authenticity and passion of a real Italian restaurant. The goal was to make visitors salivate and make them want to book a table!',
     },
+    challenges: {
+      fr: "L'optimisation des images de plats pour un rendu appétissant sur tous les écrans a été un défi majeur. Les animations subtiles avec Framer Motion devaient améliorer l'expérience sans ralentir le site. La validation et la gestion des erreurs des formulaires de contact avec React Hook Form ont nécessité une attention particulière pour l'expérience utilisateur.",
+      en: 'Optimizing dish images for appetizing rendering on all screens was a major challenge. Subtle animations with Framer Motion needed to enhance the experience without slowing down the site. Validation and error handling of contact forms with React Hook Form required special attention to user experience.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/pedropasta',
   },
   {
     id: 8,
@@ -307,6 +347,11 @@ export const projects: Project[] = [
       fr: "Toujours en quête de nouvelles recettes pour varier mes repas, j'ai voulu créer une app qui facilite la découverte culinaire. L'idée était de proposer une alternative moderne aux sites de recettes traditionnels, avec une recherche intelligente.",
       en: 'Always looking for new recipes to vary my meals, I wanted to create an app that facilitates culinary discovery. The idea was to offer a modern alternative to traditional recipe sites, with intelligent search.',
     },
+    challenges: {
+      fr: "L'API TheMealDB a parfois des données incomplètes ou manquantes, nécessitant un système de fallback robuste. La création d'un système de filtres multiples (ingrédients, catégories, origine) performant avec Zustand a demandé une architecture d'état complexe. L'optimisation des requêtes API pour éviter les appels redondants tout en gardant les données fraîches était un équilibre délicat à trouver.",
+      en: 'TheMealDB API sometimes has incomplete or missing data, requiring a robust fallback system. Creating a performant multi-filter system (ingredients, categories, origin) with Zustand required complex state architecture. Optimizing API queries to avoid redundant calls while keeping data fresh was a delicate balance to find.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/meals-finder',
   },
   {
     id: 9,
@@ -341,6 +386,11 @@ export const projects: Project[] = [
       fr: "Grand amateur de café, je voulais créer une boutique en ligne qui reflète ma passion pour cette boisson. C'était l'occasion parfaite d'apprendre l'e-commerce et de travailler sur une interface élégante et fonctionnelle.",
       en: 'As a big coffee lover, I wanted to create an online store that reflects my passion for this beverage. It was the perfect opportunity to learn e-commerce and work on an elegant and functional interface.',
     },
+    challenges: {
+      fr: "Mon premier projet e-commerce complet ! L'intégration de Stripe a été plus complexe que prévu, notamment pour gérer les différents statuts de paiement et les erreurs. La synchronisation entre l'état du panier Zustand et le localStorage pour la persistance a causé des bugs subtils. L'optimisation des images de produits et la gestion des variants (taille, type de mouture) ont nécessité une architecture de données bien pensée.",
+      en: 'My first complete e-commerce project! Stripe integration was more complex than expected, especially managing different payment statuses and errors. Synchronization between Zustand cart state and localStorage for persistence caused subtle bugs. Product image optimization and variant management (size, grind type) required well-thought-out data architecture.',
+    },
+    github: 'https://github.com/NhatHONGUYEN/Coffee',
   },
   {
     id: 10,
@@ -359,6 +409,7 @@ export const projects: Project[] = [
     },
     image: '/images/projects/wakaranai.png',
     href: 'https://wakaranai-alpha.vercel.app/',
+    github: 'https://github.com/NhatHONGUYEN/wakaranai',
   },
   {
     id: 11,
@@ -377,6 +428,7 @@ export const projects: Project[] = [
     },
     image: '/images/projects/Nhatv2.jpg',
     href: 'https://portfolio-v2-mu-neon.vercel.app/',
+    github: 'https://github.com/NhatHONGUYEN/Nhat-portfolioV2',
   },
   {
     id: 12,
@@ -395,6 +447,7 @@ export const projects: Project[] = [
     },
     image: '/images/projects/baramey.jpg',
     href: 'https://barameyv3.vercel.app/',
+    github: 'https://github.com/NhatHONGUYEN/barameyv3',
   },
   {
     id: 13,
@@ -413,6 +466,7 @@ export const projects: Project[] = [
     },
     image: '/images/projects/sushi.png',
     href: 'https://sushi-sensation.vercel.app/',
+    github: 'https://github.com/NhatHONGUYEN/Sushi-Sensation',
   },
   {
     id: 14,
@@ -431,6 +485,7 @@ export const projects: Project[] = [
     },
     image: '/images/projects/light.jpg',
     href: 'https://nhatflix.vercel.app/',
+    github: 'https://github.com/NhatHONGUYEN/CvInteractive',
   },
 ];
 
