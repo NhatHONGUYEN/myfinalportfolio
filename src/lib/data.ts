@@ -409,6 +409,19 @@ export const projects: Project[] = [
     },
     image: '/images/projects/wakaranai.png',
     href: 'https://wakaranai-alpha.vercel.app/',
+    technologies: ['React', 'JavaScript', 'CSS3', 'HTML5', 'Responsive Design'],
+    learnings: {
+      fr: "Ce projet m'a permis de me familiariser avec React et de comprendre les concepts de composants et d'état. J'ai appris les bases du responsive design et l'importance d'une interface utilisateur claire pour une boutique en ligne. C'était aussi ma première expérience avec le design d'une identité visuelle cohérente.",
+      en: 'This project allowed me to familiarize myself with React and understand component and state concepts. I learned the basics of responsive design and the importance of a clear user interface for an online store. It was also my first experience designing a coherent visual identity.',
+    },
+    motivation: {
+      fr: "Inspiré par la culture streetwear japonaise et le terme 'wakaranai' (je ne comprends pas), je voulais créer une boutique qui mélange mystère et style. C'était mon premier vrai projet e-commerce et l'occasion d'apprendre React en pratique.",
+      en: "Inspired by Japanese streetwear culture and the term 'wakaranai' (I don't understand), I wanted to create a shop that mixes mystery and style. It was my first real e-commerce project and an opportunity to learn React in practice.",
+    },
+    challenges: {
+      fr: "Étant débutant en React, la gestion des états et des props m'a posé des difficultés. La création d'un design responsive sans framework CSS a été laborieuse. L'organisation du code et la structure des composants ont nécessité plusieurs refactorisations pour maintenir un code propre.",
+      en: 'Being a React beginner, state and props management posed difficulties for me. Creating a responsive design without a CSS framework was laborious. Code organization and component structure required several refactorings to maintain clean code.',
+    },
     github: 'https://github.com/NhatHONGUYEN/wakaranai',
   },
   {
@@ -428,6 +441,26 @@ export const projects: Project[] = [
     },
     image: '/images/projects/Nhatv2.jpg',
     href: 'https://portfolio-v2-mu-neon.vercel.app/',
+    technologies: [
+      'React',
+      'JavaScript',
+      'CSS3',
+      'HTML5',
+      'React Router',
+      'Vercel',
+    ],
+    learnings: {
+      fr: "Mon premier portfolio m'a initié au développement avec React et aux concepts de Single Page Application (SPA). J'ai appris à structurer un projet, gérer la navigation avec React Router, et l'importance du responsive design. Ce fut aussi ma première expérience avec le déploiement sur Vercel.",
+      en: 'My first portfolio introduced me to React development and Single Page Application (SPA) concepts. I learned to structure a project, manage navigation with React Router, and the importance of responsive design. It was also my first experience with Vercel deployment.',
+    },
+    motivation: {
+      fr: "Ayant commencé ma reconversion en développement web, j'avais besoin d'un portfolio pour présenter mes premiers projets. C'était l'occasion parfaite d'apprendre React tout en créant quelque chose d'utile pour ma carrière.",
+      en: 'Having started my career transition into web development, I needed a portfolio to showcase my first projects. It was the perfect opportunity to learn React while creating something useful for my career.',
+    },
+    challenges: {
+      fr: "Comprendre les concepts React (JSX, composants, hooks) a été un défi initial. La gestion des animations CSS et des transitions entre sections m'a demandé beaucoup de recherches. L'optimisation des performances et le temps de chargement ont nécessité plusieurs ajustements.",
+      en: 'Understanding React concepts (JSX, components, hooks) was an initial challenge. Managing CSS animations and transitions between sections required a lot of research. Performance optimization and loading time required several adjustments.',
+    },
     github: 'https://github.com/NhatHONGUYEN/Nhat-portfolioV2',
   },
   {
@@ -447,6 +480,26 @@ export const projects: Project[] = [
     },
     image: '/images/projects/baramey.jpg',
     href: 'https://barameyv3.vercel.app/',
+    technologies: [
+      'React',
+      'JavaScript',
+      'CSS3',
+      'HTML5',
+      'Responsive Design',
+      'CSS Grid',
+    ],
+    learnings: {
+      fr: "Ce projet m'a permis d'approfondir mes compétences en design d'interface pour le secteur de la restauration. J'ai appris à créer une atmosphère chaleureuse à travers le design, l'importance de la présentation visuelle des plats, et l'art de créer une expérience utilisateur qui donne envie.",
+      en: 'This project allowed me to deepen my interface design skills for the restaurant sector. I learned to create a warm atmosphere through design, the importance of visual presentation of dishes, and the art of creating a user experience that makes you want more.',
+    },
+    motivation: {
+      fr: "Passionné de gastronomie, je voulais créer un site qui capture l'essence d'un restaurant et donne envie aux visiteurs de réserver. C'était l'occasion d'explorer le design émotionnel et l'impact visuel dans le secteur de la restauration.",
+      en: 'Passionate about gastronomy, I wanted to create a site that captures the essence of a restaurant and makes visitors want to book. It was an opportunity to explore emotional design and visual impact in the restaurant sector.',
+    },
+    challenges: {
+      fr: "Créer une galerie de plats attrayante et optimisée a été complexe. La gestion de la mise en page avec CSS Grid pour différents types de contenu (menu, photos, informations) a demandé plusieurs itérations. L'équilibre entre esthétique et fonctionnalité pour une expérience utilisateur fluide était délicat à trouver.",
+      en: 'Creating an attractive and optimized dish gallery was complex. Managing the layout with CSS Grid for different types of content (menu, photos, information) required several iterations. The balance between aesthetics and functionality for a smooth user experience was delicate to find.',
+    },
     github: 'https://github.com/NhatHONGUYEN/barameyv3',
   },
   {
@@ -466,6 +519,25 @@ export const projects: Project[] = [
     },
     image: '/images/projects/sushi.png',
     href: 'https://sushi-sensation.vercel.app/',
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'Responsive Design',
+      'CSS Animations',
+    ],
+    learnings: {
+      fr: "Ce projet m'a initié au développement web traditionnel avec HTML, CSS et JavaScript vanilla. J'ai appris les fondamentaux du responsive design, l'importance de la sémantique HTML, et comment créer des animations CSS fluides. C'était aussi ma première expérience avec la culture visuelle japonaise dans le web design.",
+      en: 'This project introduced me to traditional web development with HTML, CSS and vanilla JavaScript. I learned the fundamentals of responsive design, the importance of HTML semantics, and how to create smooth CSS animations. It was also my first experience with Japanese visual culture in web design.',
+    },
+    motivation: {
+      fr: "Fasciné par la culture japonaise et la précision de l'art culinaire nippon, je voulais créer un site qui honore cette tradition. C'était l'occasion d'apprendre les bases du développement web tout en explorant une esthétique minimaliste et élégante.",
+      en: 'Fascinated by Japanese culture and the precision of Japanese culinary art, I wanted to create a site that honors this tradition. It was an opportunity to learn the basics of web development while exploring a minimalist and elegant aesthetic.',
+    },
+    challenges: {
+      fr: "Créer des animations CSS subtiles qui évoquent la délicatesse japonaise sans JavaScript frameworks a été complexe. La gestion du responsive design avec CSS pur a nécessité beaucoup de tests sur différents appareils. L'équilibre entre minimalisme japonais et informations nécessaires pour un restaurant était délicat.",
+      en: 'Creating subtle CSS animations that evoke Japanese delicacy without JavaScript frameworks was complex. Managing responsive design with pure CSS required extensive testing on different devices. The balance between Japanese minimalism and necessary information for a restaurant was delicate.',
+    },
     github: 'https://github.com/NhatHONGUYEN/Sushi-Sensation',
   },
   {
@@ -485,6 +557,26 @@ export const projects: Project[] = [
     },
     image: '/images/projects/light.jpg',
     href: 'https://nhatflix.vercel.app/',
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'CSS Animations',
+      'Video Integration',
+      'Responsive Design',
+    ],
+    learnings: {
+      fr: "Ce projet créatif m'a permis d'explorer les possibilités du web design interactif pour présenter un parcours artistique. J'ai appris à intégrer des vidéos de performance, créer des animations CSS complexes, et designer une interface qui raconte une histoire. C'était ma première expérience de storytelling digital.",
+      en: 'This creative project allowed me to explore the possibilities of interactive web design to present an artistic journey. I learned to integrate performance videos, create complex CSS animations, and design an interface that tells a story. It was my first digital storytelling experience.',
+    },
+    motivation: {
+      fr: "Ayant un passé de danseur, je voulais créer quelque chose d'unique qui sorte du CV traditionnel. L'idée était de fusionner mes deux passions : la danse et le développement web, en créant une expérience immersive qui montre ma créativité.",
+      en: 'Having a background as a dancer, I wanted to create something unique that breaks away from the traditional CV. The idea was to merge my two passions: dance and web development, creating an immersive experience that shows my creativity.',
+    },
+    challenges: {
+      fr: "L'intégration fluide de vidéos de danse tout en maintenant les performances du site a été un défi majeur. Créer des animations CSS qui s'harmonisent avec le rythme et l'énergie de la danse nécessitait une approche artistique. L'équilibre entre créativité visuelle et lisibilité des informations était complexe à gérer.",
+      en: 'Seamlessly integrating dance videos while maintaining site performance was a major challenge. Creating CSS animations that harmonize with the rhythm and energy of dance required an artistic approach. The balance between visual creativity and information readability was complex to manage.',
+    },
     github: 'https://github.com/NhatHONGUYEN/CvInteractive',
   },
 ];

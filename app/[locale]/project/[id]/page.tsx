@@ -89,7 +89,9 @@ export default function ProjectPage() {
           </div>
 
           <div className="prose dark:prose-invert max-w-none">
-            <p className="text-lg">{project.description[locale]}</p>
+            <p className="text-muted-foreground leading-relaxed">
+              {project.description[locale]}
+            </p>
           </div>
 
           {/* Section Technologies */}
