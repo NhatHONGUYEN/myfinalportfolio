@@ -78,6 +78,11 @@
   "project": {
     "backToProjects": "Back to projects",
     "visitWebsite": "Visit website",
-    "publishedIn": "Published in"
+    "publishedIn": "Published in",
+    "technologies": "Technologies used",
+    "gallery": "Project preview",
+    "video": "Video demonstration",
+    "learnings": "What I learned",
+    "motivation": "Why this project?"
   }
 }

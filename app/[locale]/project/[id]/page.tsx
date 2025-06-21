@@ -3,7 +3,7 @@
 import React from 'react';
 import { projects } from '@/lib/data';
 import Image from 'next/image';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Code, Lightbulb, Target } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
 import { notFound, useParams } from 'next/navigation';
@@ -60,9 +60,91 @@ export default function ProjectPage() {
             />
           </div>
 
-          <div className="prose dark:prose-invert max-w-none">
-            <p className="text-lg">{project.description[locale]}</p>
-          </div>
+          {/* Section Technologies */}
+          {project.technologies && (
+            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <Code className="h-5 w-5 text-primary" />
+                <h2 className="text-xl font-semibold">{t('technologies')}</h2>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <Badge key={index} variant="outline" className="text-sm">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Section Apprentissages */}
+          {project.learnings && (
+            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <Lightbulb className="h-5 w-5 text-primary" />
+                <h2 className="text-xl font-semibold">{t('learnings')}</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                {project.learnings[locale]}
+              </p>
+            </div>
+          )}
+
+          {/* Section Motivation */}
+          {project.motivation && (
+            <div className="mt-8 p-6 bg-muted/50 rounded-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <Target className="h-5 w-5 text-primary" />
+                <h2 className="text-xl font-semibold">{t('motivation')}</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                {project.motivation[locale]}
+              </p>
+            </div>
+          )}
+
+          {/* Section Galerie d'images */}
+          {project.gallery && (
+            <div className="mt-8">
+              <div className="flex items-center gap-2 mb-6">
+                <h2 className="text-xl font-semibold">{t('gallery')}</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.gallery.map((imageUrl, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-video overflow-hidden rounded-xl"
+                  >
+                    <Image
+                      src={imageUrl}
+                      alt={`${project.title} - Image ${index + 1}`}
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      fill
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Section Vidéo */}
+          {project.video && (
+            <div className="mt-8">
+              <div className="flex items-center gap-2 mb-6">
+                <h2 className="text-xl font-semibold">{t('video')}</h2>
+              </div>
+              <div className="relative aspect-video overflow-hidden rounded-2xl">
+                <video
+                  src={project.video}
+                  controls
+                  className="w-full h-full object-cover"
+                  poster={project.image}
+                >
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+            </div>
+          )}
 
           <div className="mt-8">
             <ButtonLink

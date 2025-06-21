@@ -21,6 +21,17 @@ export type Project = {
   };
   image: string;
   href: string;
+  technologies?: string[];
+  gallery?: string[];
+  video?: string;
+  learnings?: {
+    fr: string;
+    en: string;
+  };
+  motivation?: {
+    fr: string;
+    en: string;
+  };
 };
 
 export type NavigationItem = {

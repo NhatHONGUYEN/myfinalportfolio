@@ -41,6 +41,27 @@ export const projects: Project[] = [
     },
     image: '/images/projects/Todobase.jpg',
     href: 'https://todoappnhat.netlify.app',
+    technologies: [
+      'Java',
+      'Spring Boot',
+      'Angular',
+      'TypeScript',
+      'PostgreSQL',
+      'Docker',
+    ],
+    learnings: {
+      fr: "Ce projet m'a permis de découvrir l'écosystème Java et Spring Boot. J'ai appris à créer des APIs REST robustes, à gérer l'authentification JWT, et à structurer une application Angular avec des services et des guards. La gestion des états avec Angular et l'intégration avec une base de données PostgreSQL ont été des défis enrichissants.",
+      en: 'This project allowed me to discover the Java and Spring Boot ecosystem. I learned to create robust REST APIs, manage JWT authentication, and structure an Angular application with services and guards. State management with Angular and integration with a PostgreSQL database were enriching challenges.',
+    },
+    motivation: {
+      fr: "Voulant élargir mes compétences au-delà de React/Next.js, j'ai choisi de me lancer dans Java et Angular pour diversifier mon profil technique. Une todo-list était le projet parfait pour apprendre les bases : CRUD, authentification, et architecture MVC. C'était aussi un moyen d'organiser concrètement mon apprentissage !",
+      en: 'Wanting to expand my skills beyond React/Next.js, I chose to dive into Java and Angular to diversify my technical profile. A todo-list was the perfect project to learn the basics: CRUD, authentication, and MVC architecture. It was also a way to concretely organize my learning!',
+    },
+    gallery: [
+      '/images/projects/todobase-1.jpg',
+      '/images/projects/todobase-2.jpg',
+    ],
+    video: '/videos/todobase-demo.mp4',
   },
   {
     id: 2,
@@ -59,6 +80,23 @@ export const projects: Project[] = [
     },
     image: '/images/projects/HeroCoach.jpg',
     href: 'https://coach-sportif.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'PostgreSQL',
+      'Stripe',
+      'OpenAI API',
+    ],
+    learnings: {
+      fr: "Ce projet m'a permis d'approfondir l'intégration de l'IA conversationnelle avec OpenAI, la gestion des paiements avec Stripe, et la création d'un système d'abonnement complet. J'ai aussi travaillé sur l'UX/UI pour rendre l'expérience utilisateur fluide et engageante.",
+      en: 'This project allowed me to deepen conversational AI integration with OpenAI, payment management with Stripe, and creating a complete subscription system. I also worked on UX/UI to make the user experience smooth and engaging.',
+    },
+    motivation: {
+      fr: "Passionné de sport, je voulais créer une plateforme qui combine technologie et fitness. L'idée d'un coach virtuel intelligent qui s'adapte aux besoins de chaque utilisateur m'a motivé à explorer l'IA conversationnelle et les systèmes d'abonnement.",
+      en: "Passionate about sports, I wanted to create a platform that combines technology and fitness. The idea of an intelligent virtual coach that adapts to each user's needs motivated me to explore conversational AI and subscription systems.",
+    },
   },
 
   {
@@ -78,6 +116,23 @@ export const projects: Project[] = [
     },
     image: '/images/projects/DocBoard - Medical Dashboard.png',
     href: 'https://doc-board.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'PostgreSQL',
+      'NextAuth.js',
+      'Twilio',
+    ],
+    learnings: {
+      fr: "Ce projet m'a initié au développement d'applications sensibles avec gestion des données médicales. J'ai appris l'importance de la sécurité, de l'authentification robuste avec NextAuth.js, et l'intégration d'APIs de notification SMS avec Twilio pour les rappels de rendez-vous.",
+      en: 'This project introduced me to developing sensitive applications with medical data management. I learned the importance of security, robust authentication with NextAuth.js, and SMS notification API integration with Twilio for appointment reminders.',
+    },
+    motivation: {
+      fr: "Ayant vécu des difficultés pour prendre rendez-vous médicaux, je voulais créer une solution qui simplifie cette démarche. L'objectif était de créer un pont numérique entre patients et professionnels de santé, tout en respectant la confidentialité des données.",
+      en: 'Having experienced difficulties making medical appointments, I wanted to create a solution that simplifies this process. The goal was to create a digital bridge between patients and healthcare professionals, while respecting data confidentiality.',
+    },
   },
 
   {
@@ -98,6 +153,22 @@ export const projects: Project[] = [
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/cznrzf6wnnixp9vcvnen',
     href: 'https://mocou.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+      'Zustand',
+      'Cloudinary',
+    ],
+    learnings: {
+      fr: "Ce projet m'a permis d'explorer la gamification dans l'apprentissage et les animations avancées avec Framer Motion. J'ai appris à créer une expérience utilisateur engageante avec un système de progression, des badges, et une mascotte interactive qui guide l'utilisateur.",
+      en: 'This project allowed me to explore gamification in learning and advanced animations with Framer Motion. I learned to create an engaging user experience with a progression system, badges, and an interactive mascot that guides the user.',
+    },
+    motivation: {
+      fr: "Passionné par la culture coréenne et l'apprentissage des langues, je voulais créer une expérience d'apprentissage différente, plus ludique et moins intimidante. Pochacco apporte cette dimension kawaii qui rend l'apprentissage du coréen plus accessible et amusant.",
+      en: 'Passionate about Korean culture and language learning, I wanted to create a different learning experience, more playful and less intimidating. Pochacco brings this kawaii dimension that makes learning Korean more accessible and fun.',
+    },
   },
 
   {
@@ -118,6 +189,22 @@ export const projects: Project[] = [
     image:
       'https://res.cloudinary.com/nhatflux/image/upload/f_webp/bkr8remsm7dgqrfwkfsf',
     href: 'https://anima-dusky.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Jikan API',
+      'Framer Motion',
+      'React Query',
+    ],
+    learnings: {
+      fr: "Ce projet m'a appris à travailler avec des APIs externes complexes comme Jikan API (MyAnimeList). J'ai découvert React Query pour la gestion optimisée des données, le cache et la synchronisation. Les animations fluides avec Framer Motion ont aussi été un défi intéressant.",
+      en: 'This project taught me to work with complex external APIs like Jikan API (MyAnimeList). I discovered React Query for optimized data management, caching and synchronization. Smooth animations with Framer Motion were also an interesting challenge.',
+    },
+    motivation: {
+      fr: "Grand fan d'anime, je voulais créer une plateforme qui centralise toutes les informations sur mes séries préférées. L'objectif était de proposer une alternative moderne et élégante aux sites existants, avec une UX soignée et des données riches.",
+      en: 'As a big anime fan, I wanted to create a platform that centralizes all information about my favorite series. The goal was to offer a modern and elegant alternative to existing sites, with polished UX and rich data.',
+    },
   },
   {
     id: 6,
@@ -136,6 +223,22 @@ export const projects: Project[] = [
     },
     image: '/images/projects/blog.webp',
     href: 'https://nhathnblog.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'MDX',
+      'Contentlayer',
+      'Vercel',
+    ],
+    learnings: {
+      fr: "Ce projet m'a initié au développement de blogs avec du contenu statique. J'ai appris à utiliser MDX pour écrire du contenu riche, Contentlayer pour la gestion des articles, et à optimiser le SEO. C'était aussi l'occasion de travailler sur le design et la typographie.",
+      en: 'This project introduced me to blog development with static content. I learned to use MDX for rich content writing, Contentlayer for article management, and SEO optimization. It was also an opportunity to work on design and typography.',
+    },
+    motivation: {
+      fr: "Voulant documenter mon parcours de reconversion, j'ai créé ce blog pour partager mes apprentissages et aider d'autres personnes dans la même situation. C'est devenu mon espace de réflexion et de partage avec la communauté dev.",
+      en: 'Wanting to document my career transition journey, I created this blog to share my learnings and help others in the same situation. It became my space for reflection and sharing with the dev community.',
+    },
   },
   {
     id: 7,
@@ -154,6 +257,21 @@ export const projects: Project[] = [
     },
     image: '/images/projects/PedroPasta.jpg',
     href: 'https://pedropasta-nhat-quans-projects.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+      'React Hook Form',
+    ],
+    learnings: {
+      fr: "Ce projet m'a permis de travailler sur l'identité visuelle d'un restaurant et l'expérience utilisateur d'un site vitrine. J'ai appris à créer des animations subtiles qui mettent en valeur les plats, et à optimiser les formulaires de contact avec React Hook Form.",
+      en: "This project allowed me to work on a restaurant's visual identity and the user experience of a showcase site. I learned to create subtle animations that highlight dishes, and to optimize contact forms with React Hook Form.",
+    },
+    motivation: {
+      fr: "Passionné de cuisine italienne, je voulais créer un site qui transmette l'authenticité et la passion d'un vrai restaurant italien. L'objectif était de faire saliver les visiteurs et de leur donner envie de réserver une table !",
+      en: 'Passionate about Italian cuisine, I wanted to create a site that conveys the authenticity and passion of a real Italian restaurant. The goal was to make visitors salivate and make them want to book a table!',
+    },
   },
   {
     id: 8,
@@ -172,6 +290,22 @@ export const projects: Project[] = [
     },
     image: '/images/projects/Recipes.png',
     href: 'https://meals-finder-lake.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'TheMealDB API',
+      'React Query',
+      'Zustand',
+    ],
+    learnings: {
+      fr: "Ce projet m'a appris à créer une application de recherche complexe avec filtres multiples. J'ai découvert l'optimisation des performances avec React Query, la gestion des états de recherche, et comment créer une UX fluide pour la découverte de contenu.",
+      en: 'This project taught me to create a complex search application with multiple filters. I discovered performance optimization with React Query, search state management, and how to create a smooth UX for content discovery.',
+    },
+    motivation: {
+      fr: "Toujours en quête de nouvelles recettes pour varier mes repas, j'ai voulu créer une app qui facilite la découverte culinaire. L'idée était de proposer une alternative moderne aux sites de recettes traditionnels, avec une recherche intelligente.",
+      en: 'Always looking for new recipes to vary my meals, I wanted to create an app that facilitates culinary discovery. The idea was to offer a modern alternative to traditional recipe sites, with intelligent search.',
+    },
   },
   {
     id: 9,
@@ -190,6 +324,22 @@ export const projects: Project[] = [
     },
     image: '/images/projects/coffea.png',
     href: 'https://coffee-shop-five-jet.vercel.app/',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Zustand',
+      'Stripe',
+      'Framer Motion',
+    ],
+    learnings: {
+      fr: "Mon premier vrai projet e-commerce ! J'ai appris à gérer un panier d'achat avec Zustand, intégrer les paiements Stripe, et créer une expérience d'achat fluide. La gestion des états globaux et les animations de transition ont été des défis enrichissants.",
+      en: 'My first real e-commerce project! I learned to manage a shopping cart with Zustand, integrate Stripe payments, and create a smooth shopping experience. Global state management and transition animations were enriching challenges.',
+    },
+    motivation: {
+      fr: "Grand amateur de café, je voulais créer une boutique en ligne qui reflète ma passion pour cette boisson. C'était l'occasion parfaite d'apprendre l'e-commerce et de travailler sur une interface élégante et fonctionnelle.",
+      en: 'As a big coffee lover, I wanted to create an online store that reflects my passion for this beverage. It was the perfect opportunity to learn e-commerce and work on an elegant and functional interface.',
+    },
   },
   {
     id: 10,

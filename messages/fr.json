@@ -43,7 +43,12 @@
   "project": {
     "backToProjects": "Retour aux projets",
     "visitWebsite": "Visiter le site",
-    "publishedIn": "Publié en"
+    "publishedIn": "Publié en",
+    "technologies": "Technologies utilisées",
+    "gallery": "Aperçu du projet",
+    "video": "Démonstration vidéo",
+    "learnings": "Ce que j'ai appris",
+    "motivation": "Pourquoi ce projet ?"
   },
   "contact": {
     "title": "Contactez-moi",
