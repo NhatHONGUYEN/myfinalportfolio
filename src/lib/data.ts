@@ -58,10 +58,11 @@ export const projects: Project[] = [
       en: 'Wanting to expand my skills beyond React/Next.js, I chose to dive into Java and Angular to diversify my technical profile. A todo-list was the perfect project to learn the basics: CRUD, authentication, and MVC architecture. It was also a way to concretely organize my learning!',
     },
     gallery: [
-      '/images/projects/todobase-1.jpg',
-      '/images/projects/todobase-2.jpg',
+      '/images/projects/ToDoBase.png',
+      '/images/projects/ToDoBase1.png',
+      '/images/projects/ToDoBase2.png',
     ],
-    video: '/videos/todobase-demo.mp4',
+    video: '/videos/ToDoBaseVideo.mp4',
   },
   {
     id: 2,

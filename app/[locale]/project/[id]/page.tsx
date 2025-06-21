@@ -8,6 +8,34 @@ import { useTranslations } from 'next-intl';
 import { Badge } from '@/components/ui/badge';
 import { notFound, useParams } from 'next/navigation';
 import { ButtonLink } from '@/components/ui/button-link';
+import dynamic from 'next/dynamic';
+
+// Composant VideoPlayer importé dynamiquement pour éviter les problèmes d'hydratation
+const VideoPlayer = dynamic(
+  () =>
+    Promise.resolve(({ src, poster }: { src: string; poster: string }) => (
+      <div className="relative aspect-video overflow-hidden rounded-2xl">
+        <video
+          src={src}
+          controls
+          className="w-full h-full object-cover"
+          poster={poster}
+        >
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+      </div>
+    )),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="relative aspect-video overflow-hidden rounded-2xl bg-muted animate-pulse">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-muted-foreground">Chargement de la vidéo...</div>
+        </div>
+      </div>
+    ),
+  }
+);
 
 export default function ProjectPage() {
   const params = useParams();
@@ -58,6 +86,10 @@ export default function ProjectPage() {
               fill
               priority
             />
+          </div>
+
+          <div className="prose dark:prose-invert max-w-none">
+            <p className="text-lg">{project.description[locale]}</p>
           </div>
 
           {/* Section Technologies */}
@@ -133,16 +165,7 @@ export default function ProjectPage() {
               <div className="flex items-center gap-2 mb-6">
                 <h2 className="text-xl font-semibold">{t('video')}</h2>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-2xl">
-                <video
-                  src={project.video}
-                  controls
-                  className="w-full h-full object-cover"
-                  poster={project.image}
-                >
-                  Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-              </div>
+              <VideoPlayer src={project.video} poster={project.image} />
             </div>
           )}
 
